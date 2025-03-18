@@ -5,10 +5,39 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import ImageCarousel from "@/components/ImageSlideshow";
 import { scrollToSection } from "@/utils/smoothScroll";
+import Link from "next/link";
+import EventsTable from "@/components/EventsTable";
+import { Event } from "@/components/EventsTable";
 
 export default function Home() {
   const biographyRef = useRef<HTMLDivElement>(null);
-
+  // Event data based on the design
+  const events: Event[] = [
+    {
+      date: "MAY 03",
+      artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
+      venue: "@ LONDON PALLADIUM (UK)",
+      detailsLink: "/events/may-03-2025"
+    },
+    {
+      date: "JUNE 30",
+      artists: "LAYTON & NIKITA LIVE!",
+      venue: "@ LONDON PALLADIUM (UK)",
+      detailsLink: "/events/june-30-2025"
+    },
+    {
+      date: "MAY 03",
+      artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
+      venue: "@ LONDON PALLADIUM (UK)",
+      detailsLink: "/events/may-03-2025-2"
+    },
+    {
+      date: "JUNE 30",
+      artists: "LAYTON & NIKITA LIVE!",
+      venue: "@ LONDON PALLADIUM (UK)",
+      detailsLink: "/events/june-30-2025-2"
+    }
+  ];
   return (
     <>
       {/* Hero Section - Full Viewport */}
@@ -52,54 +81,71 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Biography Section - 2/3 Viewport Height */}
-      <section id="biography" className="h-[66vh] bg-white" ref={biographyRef}>
-        <div className="container mx-auto h-full grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Column - Simple Image */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex items-center justify-center p-8"
-          >
-            <div className="relative w-full h-full max-w-md">
-              <div className="absolute inset-0 bg-gray-800 rounded-lg" />
-              <img
-                src="/api/placeholder/600/600"
-                alt="Drummer"
-                className="relative -top-4 -left-4 w-full h-full object-cover rounded-lg shadow-xl"
-              />
-            </div>
-          </motion.div>
-
-          {/* Right Column - Red Background with Text */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex items-center justify-center p-8"
-          >
-            <div className="bg-red-600 w-full h-full relative flex flex-col p-8 rounded-lg">
-              <h2 className="text-3xl font-bold text-white mb-4">Biography</h2>
-              <div className="flex-grow" />
-              <p className="text-white text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
-                Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus 
-                rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna 
-                non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut 
-                dapibus. Mauris iaculis porttitor posuere.
+      {/* Biography Section - Using the new layout from the design */}
+      <section id="biography" ref={biographyRef} className="w-full bg-black text-white">
+        <div className="flex flex-col md:flex-row">
+          {/* Left side - Main image (2/3 width on desktop) */}
+          <div className="w-full md:w-2/3 h-screen relative">
+            <img 
+              src="https://picsum.photos/1200/800" 
+              alt="Drummer performing" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Right side - Bio text (1/3 width on desktop) */}
+          <div className="w-full md:w-1/3 bg-indigo-900 p-8 flex flex-col justify-center">
+            <h2 className="text-6xl font-bold mb-12">BIO.</h2>
+            <div className="space-y-6">
+              <p className="text-sm">
+                "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor 
+                Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation 
+                Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+              </p>
+              <p className="text-sm">
+                Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat Nulla 
+                Pariatur. Excepteur Sint Occaecat Cupidatat Non Proident, Sunt In Culpa Qui Officia Deserunt Mollit 
+                Anim Id Est Laborum."
               </p>
             </div>
-          </motion.div>
+            <div className="mt-8">
+              <Link href="/about" className="text-white hover:text-gray-300 transition-colors text-sm">
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* Image gallery (3 images in a row) */}
+        <div className="w-full flex flex-col md:flex-row h-96">
+          <div className="w-full md:w-1/3 h-full">
+            <img 
+              src="https://picsum.photos/400/400" 
+              alt="Performance with lighting" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full md:w-1/3 h-full">
+            <img 
+              src="https://picsum.photos/200/400" 
+              alt="Drummer in action" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full md:w-1/3 h-full">
+            <img 
+              src="https://picsum.photos/600/400" 
+              alt="Drum kit setup" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Image Slideshow - 1/3 Viewport Height */}
-      <section id="gallery" className="h-[33vh]">
-        <ImageCarousel />
-      </section>
+      
+      {/* Selected Works Section - Using the imported component */}
+      <EventsTable events={events} />
+
     </>
   );
 }
