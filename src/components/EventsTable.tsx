@@ -32,7 +32,7 @@ const EventsTable = ({ events }: SelectedWorksProps) => {
           <table className="w-full border-collapse">
             <tbody>
               {events.map((event, index) => (
-                <tr key={index} className="border-t border-gray-800">
+                <tr key={index} className="border-t-2 border-white bor">
                   <td className="py-6 pr-4 text-left w-1/6 text-sm">{event.date}</td>
                   <td className="py-6 pr-4 text-left w-2/6 text-sm">{event.artists}</td>
                   <td className="py-6 pr-4 text-left w-2/6 text-sm">{event.venue}</td>
