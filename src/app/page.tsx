@@ -4,12 +4,21 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ImageCarousel from "@/components/ImageSlideshow";
+import ImageSlideshow from "@/components/ImageSlideshow";
 import MotionImage from "@/components/MotionImage";
 import { scrollToSection } from "@/utils/smoothScroll";
 import Link from "next/link";
 import EventsTable from "@/components/EventsTable";
 import { Event } from "@/components/EventsTable";
+
+const images = [
+  "https://picsum.photos/300/400",
+  "https://picsum.photos/200/400",
+  "https://picsum.photos/600/400",
+  "https://picsum.photos/500/400",
+  "https://picsum.photos/500/500",
+  "https://picsum.photos/300/600",
+];
 
 export default function Home() {
   const biographyRef = useRef<HTMLDivElement>(null);
@@ -43,14 +52,14 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Full Viewport */}
-      <section id="hero" className="h-screen w-full flex flex-col items-center justify-center bg-black text-white relative">
+      <section id="hero" className="h-screen w-full flex flex-col items-center justify-center text-white relative">
         <div className="text-center px-4">
           {/* Logo Animation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-4 flex justify-center"
+            className="flex justify-center"
           >
             {/* Logo Image */}
             <Image
@@ -58,7 +67,7 @@ export default function Home() {
               alt="Brand Logo"
               width={200} // Adjust as needed
               height={200} // Adjust as needed
-              className="w-32 md:w-48 h-auto" // Responsive sizing
+              className="w-72 h-auto" // Responsive sizing
               priority
             />
           </motion.div>
@@ -97,10 +106,10 @@ export default function Home() {
       </section>
 
       {/* Biography Section - Using the new layout from the design */}
-      <section id="biography" ref={biographyRef} className="w-full h-[90vh] bg-black text-white">
-        <div className="flex flex-col md:flex-row h-full">
+      <section id="biography" ref={biographyRef} className="w-full lg:h-[90vh] bg-black text-white">
+        <div className="flex flex-col lg:flex-row h-full">
           {/* Left side - Main image (2/3 width on desktop) */}
-          <div className=" w-full md:w-2/3 col-span-1 flex items-end">
+          <div className=" w-full h-96 lg:h-full lg:w-2/3 col-span-1 flex items-end">
             <MotionImage
               src="/images/gallery/profile_hoxton.JPG"
               alt="Ollie Woods at Hoxton"
@@ -109,15 +118,15 @@ export default function Home() {
           </div>
 
           {/* Right side - Bio text (1/3 width on desktop) */}
-          <div className="h-full w-full md:w-1/3 bg-[#474973] text-white px-8 md:pt-16 lg:pt-24 flex flex-col justify-between">
+          <div className="h-full w-full lg:w-1/3 bg-[#474973] text-white px-4 lg:pt-16 xl:pt-24 flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
               {/* Title */}
-              <h2 className="text-6xl font-bold mb-12 md:mb-16 lg:mb-20">BIO.</h2>
+              <h2 className="text-6xl font-bold mt-10 lg:mt-0 mb-12 md:mb-16 lg:mb-20">BIO.</h2>
               {/* Bio Text */}
               <div className="grid grid-cols-3 ">
                 {/* Text Container */}
                 <div className="col-span-2 max-w-2xl text-sm font-medium leading-6 space-y-6 flex flex-col justify-end self-end">
-                  <p>
+                  <p className="indent-8">
                     Ollie Woods is an <span className="font-bold">in-demand session drummer</span>
                     working with internationally acclaimed artists. This diverse portfolio has seen him
                     perform with <span className="font-bold">Cynthia Erivo</span> at the London
@@ -126,7 +135,7 @@ export default function Home() {
                     His primary work lies in the pop/rock genre, yet his experience enables him to comfortably
                     adapt to any performance environment.
                   </p>
-                  <p>
+                  <p className="indent-8 block lg:hidden xl:block">
                     He has developed a <span className="font-bold">library of transcription and
                       performance</span> videos for the drumming community on Instagram, with a combined audience
                     of over <span className="font-bold">100,000</span> across social media. Ollie is
@@ -150,29 +159,11 @@ export default function Home() {
       </section>
 
       {/* Image gallery (3 images in a row) */}
-      <div className="w-full flex flex-col md:flex-row h-96">
-        <div className="w-full md:w-1/3 h-full">
-          <img
-            src="https://picsum.photos/400/400"
-            alt="Performance with lighting"
-            className="w-full h-full object-cover"
+      <section id="landingCarousel" className="w-full bg-black text-white">
+          <ImageSlideshow
+            slides={images}
           />
-        </div>
-        <div className="w-full md:w-1/3 h-full">
-          <img
-            src="https://picsum.photos/200/400"
-            alt="Drummer in action"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-full md:w-1/3 h-full">
-          <img
-            src="https://picsum.photos/600/400"
-            alt="Drum kit setup"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+      </section>
 
       {/* Selected Works Section - Using the imported component */}
       <EventsTable events={events} />

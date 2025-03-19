@@ -1,66 +1,39 @@
-// components/ImageSlideshow.tsx
-"use client";
+import React from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import AutoScroll from 'embla-carousel-auto-scroll'
 
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+type PropType = {
+  slides: string[] // Array of image URLs
+}
 
-const ImageCarousel = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  // Array of at least 6 images
-  const images = [
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-    "https://picsum.photos/800/500",
-  ];
-
-  // Duplicate the images array to create a seamless loop
-  const carouselImages = [...images, ...images];
-
-  useEffect(() => {
-    // No need for manual animation control as we'll use framer-motion
-  }, []);
+const ImageSlideshow: React.FC<PropType> = ({ slides }) => {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,  // Enable looping through the images
+      skipSnaps: false,  // Allow snapping to slides (ensures smooth scrolling)
+      align: 'start',  // Keep slides aligned at the start
+      containScroll: 'trimSnaps', // Avoid empty space after the last slide
+    },
+    [AutoScroll({ playOnInit: true })] // Auto-scroll plugin with 3-second delay
+  )
 
   return (
-    <div className="w-full h-full overflow-hidden relative">
-      <motion.div
-        ref={carouselRef}
-        className="flex absolute"
-        animate={{
-          x: [`0%`, `-50%`]
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 40,
-            ease: "linear"
-          }
-        }}
-      >
-        {carouselImages.map((src, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-1/3 h-full px-2"
-          >
-            <div 
-              className="w-full h-full"
-              style={{
-                backgroundImage: `url(${src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-          </div>
-        ))}
-      </motion.div>
+    <div className="embla relative" ref={emblaRef}>
+      <div className="embla__viewport overflow-hidden">
+        <div className="embla__container flex">
+          {slides.slice(0, 3).map((src, index) => (
+            <div key={index} className="embla__slide w-1/3">
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-[300px] object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default ImageCarousel;
+export default ImageSlideshow

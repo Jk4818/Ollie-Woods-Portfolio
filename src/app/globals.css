@@ -6,6 +6,7 @@
   --foreground: #121212;
   --color-custom-main: #474973; /* Custom background color */
   --font-sans: "Inter", sans-serif; /* Inter font */
+  --font-serif: "lora", serif; /* Lora font */
 }
 
 @media (prefers-color-scheme: dark) {
