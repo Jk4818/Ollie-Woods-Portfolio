@@ -4,11 +4,15 @@
 :root {
   --background: #ffffff;
   --foreground: #121212;
-  --color-custom-main: #474973; /* Custom background color */
   --font-sans: "Inter", sans-serif; /* Inter font */
   --font-serif: "lora", serif; /* Lora font */
 }
 
+@theme {
+
+  --color-custom-main: #474973; /* Custom background color */
+  --color-custom-background: #121212; /* Custom main dark color */
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;

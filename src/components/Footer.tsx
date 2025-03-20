@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-4">MENU</h3>
-            <ul className="space-y-2">
+            <h3 className="text-md font-bold mb-4">MENU</h3>
+            <ul className="">
               <li>
                 <Link href="/about" className="text-white hover:text-gray-300 transition-colors text-sm">
                   ABOUT
@@ -34,12 +34,11 @@ const Footer = () => {
           </div>
           
           <div className="mb-8 md:mb-0 md:text-right">
-            <h3 className="text-lg font-bold mb-4">CONTACT</h3>
-            <p className="text-sm">OLLIEWOODSDRUMS@GMAIL.COM</p>
+            <p className="text-md font-bold tracking-wide">OLLIEWOODSDRUMS@GMAIL.COM</p>
           </div>
         </div>
         
-        <div className="mt-12 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-12 md:mt-42 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a href="https://www.youtube.com/ow" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <Youtube className="text-white hover:text-gray-300 transition-colors" size={20} />
@@ -52,14 +51,14 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="text-sm text-right">
-            <p>DESIGNED & DEVELOPED WITH LOVE BY <span className="font-bold">jk</span></p>
+          <div className="text-[0.6rem] text-right uppercase">
+            <p>Designed & Developed with ❤️ by <span className="font-bold">jk</span></p>
           </div>
+        <div className="mt-8 text-right uppercase">
+          <p className="text-sm">All Rights Reserved {new Date().getFullYear() }</p>
+        </div>
         </div>
         
-        <div className="mt-8 text-right">
-          <p className="text-sm">ALL RIGHTS RESERVED</p>
-        </div>
       </div>
     </footer>
   );

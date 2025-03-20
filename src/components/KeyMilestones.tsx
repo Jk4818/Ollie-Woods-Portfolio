@@ -38,8 +38,8 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-white">
-                <th className="py-4 text-left w-1/2  text-sm uppercase font-normal">Date</th>
-                <th className="py-4 text-left w-1/2 text-sm uppercase font-normal">Milestone</th>
+                <th className="py-4 text-left w-1/2  text-base uppercase font-bold">Date</th>
+                <th className="py-4 text-left w-1/2 text-base uppercase font-bold">Milestone</th>
               </tr>
             </thead>
             <tbody>

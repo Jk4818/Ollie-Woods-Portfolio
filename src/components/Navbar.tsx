@@ -47,7 +47,7 @@ const Navbar = () => {
     <AnimatePresence>
       {shouldShow && (
         <motion.div
-          className="fixed top-0 w-full z-50 overflow-hidden pointer-events-none bg-black/70 backdrop-blur-sm"
+          className="fixed top-0 w-full z-50 overflow-hidden pointer-events-none bg-custom-background/70 backdrop-blur-sm"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
