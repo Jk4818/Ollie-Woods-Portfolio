@@ -7,7 +7,7 @@ import Image from "next/image";
 import ImageSlideshow from "@/components/ImageSlideshow";
 import MotionImage from "@/components/MotionImage";
 import { scrollToSection } from "@/utils/smoothScroll";
-import Link from "next/link";
+import LearnMoreLink from "@/components/LearnMoreLink";
 import EventsTable from "@/components/EventsTable";
 import { Event } from "@/components/EventsTable";
 
@@ -148,10 +148,8 @@ export default function Home() {
 
 
             {/* Learn More Link */}
-            <div className="text-right pb-6">
-              <Link href="/about" className="text-white text-sm font-semibold tracking-wide border-b border-white pb-1 hover:opacity-80">
-                Learn More
-              </Link>
+            <div>
+              <LearnMoreLink href="/about" />
             </div>
           </div>
         </div>
@@ -160,9 +158,9 @@ export default function Home() {
 
       {/* Image gallery (3 images in a row) */}
       <section id="landingCarousel" className="w-full bg-black text-white">
-          <ImageSlideshow
-            slides={images}
-          />
+        <ImageSlideshow
+          slides={images}
+        />
       </section>
 
       {/* Selected Works Section - Using the imported component */}
