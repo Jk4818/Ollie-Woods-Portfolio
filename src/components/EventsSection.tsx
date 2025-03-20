@@ -1,7 +1,7 @@
-// components/EventsSection.tsx
 import { useRef } from "react";
 import EventsTable from "./EventsTable";
 import { Event } from "./EventsTable";
+import { motion } from "framer-motion";
 
 interface YearlyEvents {
   year: string;
@@ -16,9 +16,27 @@ interface EventsSectionProps {
 
 const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
+  // We'll add a container motion.div to create a staggered reveal effect
+  // for the multiple EventsTable components
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
 
   return (
-    <section ref={sectionRef} className="w-full">
+    <motion.section 
+      ref={sectionRef} 
+      className="w-full"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.05 }}
+    >
       {yearsData.map((yearData, index) => (
         <EventsTable 
           key={yearData.year}
@@ -30,7 +48,7 @@ const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
           showLearnMore={index === yearsData.length - 1}
         />
       ))}
-    </section>
+    </motion.section>
   );
 };
 

@@ -30,6 +30,14 @@ export default function About() {
             milestone: "Layton & Nikita Live!"
         },
         {
+            date: "2022",
+            milestone: "Layton & Nikita Live!"
+        },
+        {
+            date: "2022",
+            milestone: "Layton & Nikita Live!"
+        },
+        {
             date: "2020",
             milestone: "Layton & Nikita Live!"
         }

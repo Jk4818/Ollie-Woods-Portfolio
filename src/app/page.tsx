@@ -148,8 +148,8 @@ export default function Home() {
 
 
             {/* Learn More Link */}
-            <div>
-              <LearnMoreLink href="/about" />
+            <div className="text-right w-full mb-4">
+              <LearnMoreLink href="/about" target="" />
             </div>
           </div>
         </div>
