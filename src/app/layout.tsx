@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lora.variable} ${inter.variable} `}>
-        <div className="min-h-screen flex flex-col ">
+        <div className="min-h-screen">
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow px-4">{children}</main>
           <Footer />
         </div>
       </body>

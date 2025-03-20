@@ -12,22 +12,43 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 ;
 ;
-const LearnMoreLink = ({ href, text = "Learn More" })=>{
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "text-right pb-6",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-            href: href,
-            target: "_blank",
-            className: "text-white text-sm font-semibold tracking-wide border-b border-white pb-1 hover:opacity-80",
-            children: text
-        }, void 0, false, {
-            fileName: "[project]/src/components/LearnMoreLink.tsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, this)
+const LearnMoreLink = ({ href, text = "Learn More", target = "_blank", className = "", ariaLabel })=>{
+    // Set proper rel attribute when target is _blank for security
+    const rel = target === "_blank" ? "noopener noreferrer" : undefined;
+    // Generate accessible aria-label if not provided
+    const accessibleLabel = ariaLabel || `${text}${target === "_blank" ? " (opens in a new tab)" : ""}`;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+        href: href,
+        target: target,
+        rel: rel,
+        "aria-label": accessibleLabel,
+        className: `
+        relative 
+        inline-block
+        font-medium
+        transition-colors
+        duration-200
+        hover:text-gray-300
+        after:content-['']
+        after:absolute
+        after:w-0
+        after:h-[1px]
+        after:bg-current
+        after:left-0
+        after:bottom-[-2px]
+        after:transition-all
+        after:duration-300
+        hover:after:w-full
+        focus:outline-none
+        focus:ring-2
+        focus:ring-offset-2
+        focus:ring-gray-300
+        ${className}
+      `,
+        children: text
     }, void 0, false, {
         fileName: "[project]/src/components/LearnMoreLink.tsx",
-        lineNumber: 10,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 };
@@ -451,7 +472,7 @@ function Services() {
         className: "",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container mx-auto mt-40 h-[80vh] w-full flex flex-col items-center justify-center text-white relative",
+                className: "container mx-auto h-screen w-full flex flex-col items-center justify-center text-white relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-full",
@@ -539,7 +560,8 @@ function Services() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex justify-end mt-auto uppercase",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LearnMoreLink$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "https://patreon.com/OllieWoodsDrums",
+                                            href: "/contact",
+                                            target: "",
                                             text: "Contact Me"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",

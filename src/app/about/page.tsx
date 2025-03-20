@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import React, { useRef, useState } from 'react'
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import MotionImage from "@/components/MotionImage";
 import KeyMilestones from '@/components/KeyMilestones';
 import { Milestone } from "@/components/KeyMilestones";

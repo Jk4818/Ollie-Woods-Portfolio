@@ -102,15 +102,20 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/utils/use-in-view.mjs [app-ssr] (ecmascript)");
 ;
 ;
 ;
 const KeyMilestones = ({ milestones })=>{
-    const milestonesRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const isInView = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useInView"])(ref, {
+        once: false,
+        amount: 0.2
+    }); // Activate when 20% is visible
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        ref: ref,
         id: "milestones",
-        ref: milestonesRef,
-        className: "w-full text-white py-24 ",
+        className: "w-full text-white py-24",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -121,7 +126,7 @@ const KeyMilestones = ({ milestones })=>{
                             className: "hidden lg:block w-1/2"
                         }, void 0, false, {
                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 23,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -132,9 +137,12 @@ const KeyMilestones = ({ milestones })=>{
                                     opacity: 0,
                                     y: 20
                                 },
-                                animate: {
+                                animate: isInView ? {
                                     opacity: 1,
                                     y: 0
+                                } : {
+                                    opacity: 0,
+                                    y: 20
                                 },
                                 transition: {
                                     duration: 0.6
@@ -142,18 +150,18 @@ const KeyMilestones = ({ milestones })=>{
                                 children: "KEY MILESTONES."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 25,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 22,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,11 +174,11 @@ const KeyMilestones = ({ milestones })=>{
                                     className: "border-b-2 border-white",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                            className: "py-4 text-left w-1/2  text-base uppercase font-bold",
+                                            className: "py-4 text-left w-1/2 text-base uppercase font-bold",
                                             children: "Date"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 41,
+                                            lineNumber: 42,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -178,18 +186,18 @@ const KeyMilestones = ({ milestones })=>{
                                             children: "Milestone"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 42,
+                                            lineNumber: 43,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 39,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -199,9 +207,12 @@ const KeyMilestones = ({ milestones })=>{
                                             opacity: 0,
                                             y: 10
                                         },
-                                        animate: {
+                                        animate: isInView ? {
                                             opacity: 1,
                                             y: 0
+                                        } : {
+                                            opacity: 0,
+                                            y: 10
                                         },
                                         transition: {
                                             duration: 0.4,
@@ -213,7 +224,7 @@ const KeyMilestones = ({ milestones })=>{
                                                 children: milestone.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                lineNumber: 54,
+                                                lineNumber: 55,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -221,40 +232,40 @@ const KeyMilestones = ({ milestones })=>{
                                                 children: milestone.milestone
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                lineNumber: 57,
+                                                lineNumber: 58,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 48,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 37,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/KeyMilestones.tsx",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/KeyMilestones.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 };
@@ -276,34 +287,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 ;
+/**
+ * Custom hook to generate transformed colors for each character.
+ */ const useCharacterColors = (text, scrollYProgress)=>{
+    const words = text.split(" ");
+    const totalCharCount = text.length;
+    return words.flatMap((word, wordIndex)=>word.split("").map((_, charIndex)=>{
+            const allWordsBeforeLength = words.slice(0, wordIndex).reduce((sum, w)=>sum + w.length, 0);
+            const spacesCount = wordIndex;
+            const totalIndex = allWordsBeforeLength + spacesCount + charIndex;
+            const charThreshold = totalIndex / totalCharCount * 0.6;
+            return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTransform"])(scrollYProgress, [
+                charThreshold,
+                charThreshold + 0.02
+            ], [
+                "#4B5563",
+                "#FFFFFF"
+            ]);
+        }));
+};
 const AnimatedText = ({ text, scrollYProgress })=>{
-    // Split the text by words first
-    const words = text.split(' ');
+    const colorTransforms = useCharacterColors(text, scrollYProgress);
+    let colorIndex = 0;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
         className: "indent-8 md:indent-18 text-left",
-        children: words.map((word, wordIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Fragment, {
+        children: text.split(" ").map((word, wordIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Fragment, {
                 children: [
-                    word.split('').map((char, charIndex)=>{
-                        // Calculate overall character index for the entire text
-                        // This helps spread the animation across the whole text
-                        const allWordsBeforeLength = words.slice(0, wordIndex).reduce((sum, w)=>sum + w.length, 0);
-                        // Add spaces to the count
-                        const spacesCount = wordIndex;
-                        // Calculate total character index including spaces
-                        const totalIndex = allWordsBeforeLength + spacesCount + charIndex;
-                        // Calculate total character count including spaces
-                        const totalCharCount = text.length;
-                        // Calculate the progress threshold for this character
-                        const charThreshold = totalIndex / totalCharCount * 0.6; // Only use 80% of scroll for animation
-                        // Transform this character's color based on scroll progress
-                        const color = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTransform"])(scrollYProgress, [
-                            charThreshold,
-                            charThreshold + 0.02
-                        ], [
-                            "#4B5563",
-                            "#FFFFFF"
-                        ] // From dark gray to white
-                        );
+                    word.split("").map((char, charIndex)=>{
+                        const color = colorTransforms[colorIndex++];
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
                             style: {
                                 color
@@ -312,20 +323,20 @@ const AnimatedText = ({ text, scrollYProgress })=>{
                             children: char
                         }, `char-${wordIndex}-${charIndex}`, false, {
                             fileName: "[project]/src/components/AnimatedText.tsx",
-                            lineNumber: 46,
+                            lineNumber: 44,
                             columnNumber: 29
                         }, this);
                     }),
-                    wordIndex < words.length - 1 && ' '
+                    wordIndex < text.split(" ").length - 1 && " "
                 ]
             }, `word-${wordIndex}`, true, {
                 fileName: "[project]/src/components/AnimatedText.tsx",
-                lineNumber: 17,
+                lineNumber: 40,
                 columnNumber: 17
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/AnimatedText.tsx",
-        lineNumber: 15,
+        lineNumber: 38,
         columnNumber: 9
     }, this);
 };

@@ -1,6 +1,6 @@
 // components/KeyMilestones.tsx
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // Define the milestone type
 export interface Milestone {
@@ -13,10 +13,11 @@ interface KeyMilestonesProps {
 }
 
 const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
-  const milestonesRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: false, amount: 0.2 }); // Activate when 20% is visible
 
   return (
-    <section id="milestones" ref={milestonesRef} className="w-full text-white py-24 ">
+    <section ref={ref} id="milestones" className="w-full text-white py-24">
       <div className="container mx-auto">
         {/* Title aligned with the milestone column */}
         <div className="flex">
@@ -25,7 +26,7 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
             <motion.h2 
               className="text-6xl font-bold mb-16"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6 }}
             >
               KEY MILESTONES.
@@ -38,7 +39,7 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-white">
-                <th className="py-4 text-left w-1/2  text-base uppercase font-bold">Date</th>
+                <th className="py-4 text-left w-1/2 text-base uppercase font-bold">Date</th>
                 <th className="py-4 text-left w-1/2 text-base uppercase font-bold">Milestone</th>
               </tr>
             </thead>
@@ -48,7 +49,7 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
                   key={index} 
                   className="border-t-2 border-white"
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                   transition={{ duration: 0.4, delay: 0.1 * index }}
                 >
                   <td className="py-6 pr-4 text-left w-1/2 text-sm md:text-base">

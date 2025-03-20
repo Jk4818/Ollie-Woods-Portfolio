@@ -124,7 +124,7 @@ export default function Services() {
     return (
         <div className=''>
 
-            <div className='container mx-auto mt-40 h-[80vh] w-full flex flex-col items-center justify-center text-white relative'>
+            <div className='container mx-auto h-screen w-full flex flex-col items-center justify-center text-white relative'>
                 <div className='w-full'>
                     <h2 className="uppercase text-6xl font-bold mb-16 md:ml-[16.666%]">Services.</h2>
                 </div>
@@ -152,7 +152,7 @@ export default function Services() {
                         </p>
 
                         <div className="flex justify-end mt-auto uppercase">
-                            <LearnMoreLink href="https://patreon.com/OllieWoodsDrums"
+                            <LearnMoreLink href="/contact" target=''
                                 text='Contact Me' />
                         </div>
                     </div>
