@@ -35,6 +35,18 @@ export default function Services() {
             artists: "LAYTON & NIKITA LIVE!",
             venue: "@ LONDON PALLADIUM (UK)",
             detailsLink: "/events/june-30-2025-2"
+        },
+        {
+            date: "JUNE 30",
+            artists: "LAYTON & NIKITA LIVE!",
+            venue: "@ LONDON PALLADIUM (UK)",
+            detailsLink: "/events/june-30-2025-2"
+        },
+        {
+            date: "JUNE 30",
+            artists: "LAYTON & NIKITA LIVE!",
+            venue: "@ LONDON PALLADIUM (UK)",
+            detailsLink: "/events/june-30-2025-2"
         }
     ];
 
@@ -70,7 +82,8 @@ export default function Services() {
                         </p>
 
                         <div className="flex justify-end mt-auto uppercase">
-                            <LearnMoreLink href="https://patreon.com/OllieWoodsDrums" />
+                            <LearnMoreLink href="https://patreon.com/OllieWoodsDrums" 
+                            text='Contact Me'/>
                         </div>
                     </div>
 

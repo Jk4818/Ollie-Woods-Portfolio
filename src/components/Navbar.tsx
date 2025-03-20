@@ -47,14 +47,14 @@ const Navbar = () => {
     <AnimatePresence>
       {shouldShow && (
         <motion.div
-          className="fixed top-0 w-full z-50 overflow-hidden pointer-events-none"
+          className="fixed top-0 w-full z-50 overflow-hidden pointer-events-none bg-black/70 backdrop-blur-sm"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.3 }}
         >
           <motion.nav
-            className="container mx-auto flex flex-col transition-all duration-300 px-4 mix-blend-difference"
+            className="container mx-auto flex flex-col transition-all duration-300 mix-blend-difference"
           >
             {/* Navbar Container */}
             <div className="flex justify-between items-center w-full py-4 pointer-events-auto">
@@ -74,9 +74,8 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center space-x-8">
                   <Link
-                    href={isHomePage ? "#biography" : "/#biography"}
+                    href="/about"
                     className="hover:text-gray-300 transition-colors uppercase text-sm font-medium mix-blend-difference"
-                    onClick={(e) => handleNavClick(e, "biography")}
                   >
                     About
                   </Link>
@@ -97,7 +96,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Social Icons & Hamburger Menu */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center gap-4">
                   <a href="https://www.youtube.com/@OllieWoodsDrums" target="_blank" className="mix-blend-difference">
                     <Youtube className="hover:text-gray-300 transition-colors" size={20} />
                   </a>

@@ -65,7 +65,7 @@ const MotionImage: React.FC<MotionImageProps> = ({ src, alt, className }) => {
             alt={alt}
             layout="fill" // Make the image fill the container
             objectFit="cover" // Ensure the image covers the container without distorting
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover "
             priority // Improves LCP by loading it faster
           />
         </div>

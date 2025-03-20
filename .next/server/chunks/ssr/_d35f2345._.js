@@ -132,7 +132,7 @@ const MotionImage = ({ src, alt, className })=>{
                     ,
                     objectFit: "cover" // Ensure the image covers the container without distorting
                     ,
-                    className: "w-full h-full object-cover rounded-lg",
+                    className: "w-full h-full object-cover ",
                     priority: true
                 }, void 0, false, {
                     fileName: "[project]/src/components/MotionImage.tsx",
@@ -169,22 +169,22 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 ;
 ;
-const LearnMoreLink = ({ href })=>{
+const LearnMoreLink = ({ href, text = "Learn More" })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "text-right pb-6",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
             href: href,
             target: "_blank",
             className: "text-white text-sm font-semibold tracking-wide border-b border-white pb-1 hover:opacity-80",
-            children: "Learn More"
+            children: text
         }, void 0, false, {
             fileName: "[project]/src/components/LearnMoreLink.tsx",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/LearnMoreLink.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 };

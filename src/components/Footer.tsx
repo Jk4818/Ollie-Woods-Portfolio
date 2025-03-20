@@ -4,7 +4,7 @@ import { Youtube, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className=" text-white py-12 px-4 md:px-12">
+    <footer className=" text-white py-12">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-8 md:mb-0">
