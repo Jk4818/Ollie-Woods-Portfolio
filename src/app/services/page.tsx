@@ -1,52 +1,122 @@
 "use client";
 
 import React from 'react'
-import { useRef } from "react";
-import { TextFade } from '@/components/TextFade';
 import LearnMoreLink from '@/components/LearnMoreLink';
-import EventsTable from '@/components/EventsTable';
-import { Event } from "@/components/EventsTable";
+import EventsSection from '@/components/EventsSection';
+import MotionImage from "@/components/MotionImage";
 
 
 
 export default function Services() {
 
-    const eventsServices: Event[] = [
+    const eventsData = [
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025"
+            year: "2025",
+            yearLabel: "(INC. UPCOMING)",
+            events: [
+                {
+                    date: "Apr 15 - Jun 20",
+                    artists: "The West End Orchestra",
+                    venue: "Royal Albert Hall, London",
+                    detailsLink: "/works/west-end-orchestra"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Jul 10 - Jul 15",
+                    artists: "Cynthia Erivo Solo Tour",
+                    venue: "The O2 Arena, London",
+                    detailsLink: "/works/cynthia-erivo-tour"
+                }
+            ]
         },
         {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025"
+            year: "2024",
+            yearLabel: "(CURRENT)",
+            events: [
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Aug 12 - Sep 18",
+                    artists: "Layton and Nikita Live!",
+                    venue: "Theatre Royal Drury Lane, London",
+                    detailsLink: "/works/layton-nikita"
+                }
+            ]
         },
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
+            year: "2023",
+            yearLabel: "",
+            events: [
+                {
+                    date: "Nov 10 - Dec 15",
+                    artists: "The Reunion",
+                    venue: "China Tour - Multiple Venues",
+                    detailsLink: "/works/reunion-china"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Feb 5 - Mar 10",
+                    artists: "West End Live Festival",
+                    venue: "Trafalgar Square, London",
+                    detailsLink: "/works/west-end-live"
+                }
+            ]
         }
     ];
 
@@ -54,7 +124,7 @@ export default function Services() {
     return (
         <div className=''>
 
-            <div className='mt-60 h-full w-full flex flex-col items-center justify-center text-white relative'>
+            <div className='container mx-auto mt-40 h-[80vh] w-full flex flex-col items-center justify-center text-white relative'>
                 <div className='w-full'>
                     <h2 className="uppercase text-6xl font-bold mb-16 md:ml-[16.666%]">Services.</h2>
                 </div>
@@ -82,16 +152,41 @@ export default function Services() {
                         </p>
 
                         <div className="flex justify-end mt-auto uppercase">
-                            <LearnMoreLink href="https://patreon.com/OllieWoodsDrums" 
-                            text='Contact Me'/>
+                            <LearnMoreLink href="https://patreon.com/OllieWoodsDrums"
+                                text='Contact Me' />
                         </div>
                     </div>
 
                 </div>
             </div>
 
+            <section id='services_start_image' className="w-full h-[50vh] bg-black text-white">
+
+                <div className=" w-full h-full  flex items-end">
+                    <MotionImage
+                        src="/images/gallery/profile_hoxton.JPG"
+                        alt="Ollie Woods at Hoxton"
+                        className="w-full h-auto"
+                    />
+                </div>
+            </section>
+
             <section id="events" className="w-full  text-white py-24 px-4 md:px-12">
-                <EventsTable events={eventsServices} />
+                <EventsSection
+                    sectionTitle="Events."
+                    yearsData={eventsData}
+                />
+            </section>
+
+            <section id='services_end_image' className="w-full h-[80vh] bg-black text-white">
+
+                <div className=" w-full h-full  flex items-end">
+                    <MotionImage
+                        src="/images/gallery/profile_hoxton.JPG"
+                        alt="Ollie Woods at Hoxton"
+                        className="w-full h-auto"
+                    />
+                </div>
             </section>
 
         </div>

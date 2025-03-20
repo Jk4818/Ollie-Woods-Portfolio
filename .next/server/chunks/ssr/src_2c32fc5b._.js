@@ -53,7 +53,7 @@ const EventsTable = ({ events, title = "", year = "2025", yearLabel = "(INC. UPC
     // Calculate appropriate padding - less padding when no title
     const topPadding = title ? "py-24" : "pt-8 pb-24";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `w-full text-white ${topPadding} px-4 md:px-12`,
+        className: `w-full text-white ${topPadding} px-4 md:px-12 uppercase`,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -189,6 +189,46 @@ const EventsTable = ({ events, title = "", year = "2025", yearLabel = "(INC. UPC
 };
 const __TURBOPACK__default__export__ = EventsTable;
 }}),
+"[project]/src/components/EventsSection.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+// components/EventsSection.tsx
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsTable.tsx [app-ssr] (ecmascript)");
+;
+;
+;
+const EventsSection = ({ sectionTitle, yearsData })=>{
+    const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        ref: sectionRef,
+        className: "w-full",
+        children: yearsData.map((yearData, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                events: yearData.events,
+                title: index === 0 ? sectionTitle : "",
+                year: yearData.year,
+                yearLabel: yearData.yearLabel,
+                // Don't show "Learn More" except on the last table
+                showLearnMore: index === yearsData.length - 1
+            }, yearData.year, false, {
+                fileName: "[project]/src/components/EventsSection.tsx",
+                lineNumber: 23,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/src/components/EventsSection.tsx",
+        lineNumber: 21,
+        columnNumber: 5
+    }, this);
+};
+const __TURBOPACK__default__export__ = EventsSection;
+}}),
 "[project]/src/app/services/page.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -199,48 +239,120 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LearnMoreLink$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/LearnMoreLink.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsTable.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsSection.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
 function Services() {
-    const eventsServices = [
+    const eventsData = [
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025"
+            year: "2025",
+            yearLabel: "(INC. UPCOMING)",
+            events: [
+                {
+                    date: "Apr 15 - Jun 20",
+                    artists: "The West End Orchestra",
+                    venue: "Royal Albert Hall, London",
+                    detailsLink: "/works/west-end-orchestra"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Jul 10 - Jul 15",
+                    artists: "Cynthia Erivo Solo Tour",
+                    venue: "The O2 Arena, London",
+                    detailsLink: "/works/cynthia-erivo-tour"
+                }
+            ]
         },
         {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025"
+            year: "2024",
+            yearLabel: "(CURRENT)",
+            events: [
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Aug 12 - Sep 18",
+                    artists: "Layton and Nikita Live!",
+                    venue: "Theatre Royal Drury Lane, London",
+                    detailsLink: "/works/layton-nikita"
+                }
+            ]
         },
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
+            year: "2023",
+            yearLabel: "",
+            events: [
+                {
+                    date: "Nov 10 - Dec 15",
+                    artists: "The Reunion",
+                    venue: "China Tour - Multiple Venues",
+                    detailsLink: "/works/reunion-china"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Feb 5 - Mar 10",
+                    artists: "West End Live Festival",
+                    venue: "Trafalgar Square, London",
+                    detailsLink: "/works/west-end-live"
+                }
+            ]
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -256,12 +368,12 @@ function Services() {
                             children: "Services."
                         }, void 0, false, {
                             fileName: "[project]/src/app/services/page.tsx",
-                            lineNumber: 59,
+                            lineNumber: 132,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 58,
+                        lineNumber: 131,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -275,7 +387,7 @@ function Services() {
                                         children: "Transcriptions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 137,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -283,7 +395,7 @@ function Services() {
                                         children: "I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you’re looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 140,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -294,23 +406,23 @@ function Services() {
                                                 href: "https://patreon.com/OllieWoodsDrums"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/page.tsx",
-                                                lineNumber: 71,
+                                                lineNumber: 144,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 143,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 142,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 136,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -321,7 +433,7 @@ function Services() {
                                         children: "Session & Performance Work"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 149,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -329,7 +441,7 @@ function Services() {
                                         children: "For session work, live performances, or other drumming-related services, feel free to get in touch via my contact page. Whether you need a drummer for recording, gigs, or other projects, I’d love to discuss how we can collaborate."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 153,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -339,54 +451,57 @@ function Services() {
                                             text: "Contact Me"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 158,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 157,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 75,
+                                lineNumber: 148,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 135,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 57,
+                lineNumber: 130,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {}, void 0, false, {
+                fileName: "[project]/src/app/services/page.tsx",
+                lineNumber: 166,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "events",
                 className: "w-full  text-white py-24 px-4 md:px-12",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    events: eventsServices,
-                    title: "Events.",
-                    year: "2024",
-                    yearLabel: "(COMPLETED)"
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    sectionTitle: "Events.",
+                    yearsData: eventsData
                 }, void 0, false, {
                     fileName: "[project]/src/app/services/page.tsx",
-                    lineNumber: 94,
+                    lineNumber: 171,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 93,
+                lineNumber: 170,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/services/page.tsx",
-        lineNumber: 55,
+        lineNumber: 128,
         columnNumber: 9
     }, this);
 }
@@ -394,4 +509,4 @@ function Services() {
 
 };
 
-//# sourceMappingURL=src_84f63fec._.js.map
+//# sourceMappingURL=src_2c32fc5b._.js.map

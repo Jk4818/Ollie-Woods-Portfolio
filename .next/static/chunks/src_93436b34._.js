@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_f8b6ed89._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_93436b34._.js", {
 
 "[project]/src/components/LearnMoreLink.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -61,7 +61,7 @@ const EventsTable = ({ events, title = "", year = "2025", yearLabel = "(INC. UPC
     // Calculate appropriate padding - less padding when no title
     const topPadding = title ? "py-24" : "pt-8 pb-24";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `w-full text-white ${topPadding} px-4 md:px-12`,
+        className: `w-full text-white ${topPadding} px-4 md:px-12 uppercase`,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
@@ -204,6 +204,164 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
+"[project]/src/components/EventsSection.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+// components/EventsSection.tsx
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsTable.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+;
+;
+const EventsSection = ({ sectionTitle, yearsData })=>{
+    _s();
+    const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        ref: sectionRef,
+        className: "w-full",
+        children: yearsData.map((yearData, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                events: yearData.events,
+                title: index === 0 ? sectionTitle : "",
+                year: yearData.year,
+                yearLabel: yearData.yearLabel,
+                // Don't show "Learn More" except on the last table
+                showLearnMore: index === yearsData.length - 1
+            }, yearData.year, false, {
+                fileName: "[project]/src/components/EventsSection.tsx",
+                lineNumber: 23,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
+        fileName: "[project]/src/components/EventsSection.tsx",
+        lineNumber: 21,
+        columnNumber: 5
+    }, this);
+};
+_s(EventsSection, "OElGdF/BJY7Zok+h4VfeqRy4y3Y=");
+_c = EventsSection;
+const __TURBOPACK__default__export__ = EventsSection;
+var _c;
+__turbopack_context__.k.register(_c, "EventsSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/components/MotionImage.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client"; // Ensure Framer Motion works in Next.js App Router
+;
+;
+;
+const MotionImage = ({ src, alt, className })=>{
+    _s();
+    const [transformStyle, setTransformStyle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("scale(1) translate(0px, 0px)");
+    // Function that translates the image towards the cursor when hovering over the image
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "MotionImage.useEffect": ()=>{
+            const imageHoverContainer = document.getElementById("image-hover-container");
+            const imageHover = document.getElementById("image-hover");
+            if (imageHoverContainer && imageHover) {
+                imageHover.style.transition = "transform 0.3s ease-out"; // Smooth transition for scaling and translation
+                const translateImage = {
+                    "MotionImage.useEffect.translateImage": (e)=>{
+                        const { offsetWidth: width, offsetHeight: height } = imageHover;
+                        let { offsetX: x, offsetY: y } = e;
+                        // Adjust the translation speed (slower movement)
+                        const xWalk = Math.round(x / width * 100 - 50) / 6; // Reduced divisor for slower translation
+                        const yWalk = Math.round(y / height * 100 - 50) / 8; // Reduced divisor for slower translation
+                        // Apply scale and translation dynamically with slower zoom and easing
+                        setTransformStyle(`scale(1.05) translate(${xWalk}px, ${yWalk}px)`); // Reduced zoom value (1.05)
+                    }
+                }["MotionImage.useEffect.translateImage"];
+                // Event listeners for mouse movement and mouse leave
+                imageHoverContainer.addEventListener("mousemove", translateImage);
+                imageHoverContainer.addEventListener("mouseleave", {
+                    "MotionImage.useEffect": ()=>{
+                        setTransformStyle("scale(1) translate(0px, 0px)"); // Reset to default when mouse leaves
+                    }
+                }["MotionImage.useEffect"]);
+                return ({
+                    "MotionImage.useEffect": ()=>{
+                        imageHoverContainer.removeEventListener("mousemove", translateImage);
+                        imageHoverContainer.removeEventListener("mouseleave", {
+                            "MotionImage.useEffect": ()=>{
+                                setTransformStyle("scale(1) translate(0px, 0px)"); // Reset to default on mouse leave
+                            }
+                        }["MotionImage.useEffect"]);
+                    }
+                })["MotionImage.useEffect"];
+            }
+        }
+    }["MotionImage.useEffect"], []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+        id: "image-hover-container",
+        className: `relative w-full h-full overflow-hidden ${className}`,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+            id: "image-hover",
+            style: {
+                transform: transformStyle
+            },
+            className: "w-full h-full",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative w-full h-full",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    src: src,
+                    alt: alt,
+                    layout: "fill" // Make the image fill the container
+                    ,
+                    objectFit: "cover" // Ensure the image covers the container without distorting
+                    ,
+                    className: "w-full h-full object-cover ",
+                    priority: true
+                }, void 0, false, {
+                    fileName: "[project]/src/components/MotionImage.tsx",
+                    lineNumber: 63,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/MotionImage.tsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/MotionImage.tsx",
+            lineNumber: 56,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/MotionImage.tsx",
+        lineNumber: 52,
+        columnNumber: 5
+    }, this);
+};
+_s(MotionImage, "C0eLjDhIVNbp4DicLuqwXpoRoB8=");
+_c = MotionImage;
+const __TURBOPACK__default__export__ = MotionImage;
+var _c;
+__turbopack_context__.k.register(_c, "MotionImage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/src/app/services/page.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -214,55 +372,129 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$LearnMoreLink$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/LearnMoreLink.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsTable.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/EventsSection.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/MotionImage.tsx [app-client] (ecmascript)");
 "use client";
 ;
 ;
 ;
+;
 function Services() {
-    const eventsServices = [
+    const eventsData = [
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025"
+            year: "2025",
+            yearLabel: "(INC. UPCOMING)",
+            events: [
+                {
+                    date: "Apr 15 - Jun 20",
+                    artists: "The West End Orchestra",
+                    venue: "Royal Albert Hall, London",
+                    detailsLink: "/works/west-end-orchestra"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Jul 10 - Jul 15",
+                    artists: "Cynthia Erivo Solo Tour",
+                    venue: "The O2 Arena, London",
+                    detailsLink: "/works/cynthia-erivo-tour"
+                }
+            ]
         },
         {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025"
+            year: "2024",
+            yearLabel: "(CURRENT)",
+            events: [
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Aug 12 - Sep 18",
+                    artists: "Layton and Nikita Live!",
+                    venue: "Theatre Royal Drury Lane, London",
+                    detailsLink: "/works/layton-nikita"
+                }
+            ]
         },
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
-        },
-        {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
+            year: "2023",
+            yearLabel: "",
+            events: [
+                {
+                    date: "Nov 10 - Dec 15",
+                    artists: "The Reunion",
+                    venue: "China Tour - Multiple Venues",
+                    detailsLink: "/works/reunion-china"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Oct 5 - Oct 20",
+                    artists: "Jason Robert Brown & Guests",
+                    venue: "London Palladium, London",
+                    detailsLink: "/works/jason-robert-brown"
+                },
+                {
+                    date: "Feb 5 - Mar 10",
+                    artists: "West End Live Festival",
+                    venue: "Trafalgar Square, London",
+                    detailsLink: "/works/west-end-live"
+                }
+            ]
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container mx-auto mt-60 h-full w-full flex flex-col items-center justify-center text-white relative",
+                className: "container mx-auto mt-40 h-[80vh] w-full flex flex-col items-center justify-center text-white relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-full",
@@ -271,12 +503,12 @@ function Services() {
                             children: "Services."
                         }, void 0, false, {
                             fileName: "[project]/src/app/services/page.tsx",
-                            lineNumber: 59,
+                            lineNumber: 129,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 58,
+                        lineNumber: 128,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -290,7 +522,7 @@ function Services() {
                                         children: "Transcriptions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 134,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -298,7 +530,7 @@ function Services() {
                                         children: "I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you’re looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 137,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -309,23 +541,23 @@ function Services() {
                                                 href: "https://patreon.com/OllieWoodsDrums"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/page.tsx",
-                                                lineNumber: 71,
+                                                lineNumber: 141,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 140,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 139,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 133,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -336,7 +568,7 @@ function Services() {
                                         children: "Session & Performance Work"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 146,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -344,7 +576,7 @@ function Services() {
                                         children: "For session work, live performances, or other drumming-related services, feel free to get in touch via my contact page. Whether you need a drummer for recording, gigs, or other projects, I’d love to discuss how we can collaborate."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 150,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -354,54 +586,100 @@ function Services() {
                                             text: "Contact Me"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 155,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 154,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 75,
+                                lineNumber: 145,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 132,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 57,
+                lineNumber: 127,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                id: "services_start_image",
+                className: "w-full h-[50vh] bg-black text-white",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: " w-full h-full  flex items-end",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: "/images/gallery/profile_hoxton.JPG",
+                        alt: "Ollie Woods at Hoxton",
+                        className: "w-full h-auto"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/services/page.tsx",
+                        lineNumber: 166,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/services/page.tsx",
+                    lineNumber: 165,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/services/page.tsx",
+                lineNumber: 163,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "events",
                 className: "w-full  text-white py-24 px-4 md:px-12",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    events: eventsServices,
-                    title: "Events.",
-                    year: "2024",
-                    yearLabel: "(COMPLETED)"
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsSection$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    sectionTitle: "Events.",
+                    yearsData: eventsData
                 }, void 0, false, {
                     fileName: "[project]/src/app/services/page.tsx",
-                    lineNumber: 94,
+                    lineNumber: 175,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 93,
+                lineNumber: 174,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                id: "services_end_image",
+                className: "w-full h-[80vh] bg-black text-white",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: " w-full h-full  flex items-end",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: "/images/gallery/profile_hoxton.JPG",
+                        alt: "Ollie Woods at Hoxton",
+                        className: "w-full h-auto"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/services/page.tsx",
+                        lineNumber: 184,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/app/services/page.tsx",
+                    lineNumber: 183,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/services/page.tsx",
+                lineNumber: 181,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/services/page.tsx",
-        lineNumber: 55,
+        lineNumber: 125,
         columnNumber: 9
     }, this);
 }
@@ -414,4 +692,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 }]);
 
-//# sourceMappingURL=src_f8b6ed89._.js.map
+//# sourceMappingURL=src_93436b34._.js.map

@@ -10,22 +10,37 @@ export interface Event {
   detailsLink: string;
 }
 
-interface SelectedWorksProps {
+interface EventsTableProps {
   events: Event[];
+  title?: string; // Optional title prop with a default value
+  year?: string;  // Optional year prop
+  yearLabel?: string; // Optional year label
+  showLearnMore?: boolean; // Whether to show the "Learn More" link
 }
 
-const EventsTable = ({ events }: SelectedWorksProps) => {
+const EventsTable = ({ 
+  events, 
+  title = "", 
+  year = "2025", 
+  yearLabel = "(INC. UPCOMING)",
+  showLearnMore = false
+}: EventsTableProps) => {
   const worksRef = useRef<HTMLDivElement>(null);
 
-  return (
-    <section id="works" ref={worksRef} className="w-full  text-white py-24 px-4 md:px-12">
-      <div className="container mx-auto">
-        {/* Adjust heading placement */}
-        <h2 className="text-6xl font-bold mb-16 md:ml-[16.666%]">SELECTED WORKS.</h2>
+  // Calculate appropriate padding - less padding when no title
+  const topPadding = title ? "py-24" : "pt-8 pb-24";
 
-        <div className="mb-6 ">
-          <h3 className="text-4xl font-bold inline-block">2025</h3>
-          <span className="text-xl ml-4 opacity-70">(INC. UPCOMING)</span>
+  return (
+    <div className={`w-full text-white ${topPadding} px-4 md:px-12 uppercase`}>
+      <div className="container mx-auto">
+        {/* Only render title if provided */}
+        {title && (
+          <h2 className="text-6xl font-bold mb-16 md:ml-[50%] uppercase">{title}</h2>
+        )}
+
+        <div className="mb-6">
+          <h3 className="text-4xl font-bold inline-block">{year}</h3>
+          <span className="text-xl ml-4 opacity-70">{yearLabel}</span>
         </div>
 
         {/* Events Table */}
@@ -48,14 +63,16 @@ const EventsTable = ({ events }: SelectedWorksProps) => {
           </table>
         </div>
 
-        <div className="mt-12 text-right">
-          <Link href="/works" className="text-white hover:text-gray-300 transition-colors text-sm">
-            Learn More
-          </Link>
-        </div>
+        {/* Only show "Learn More" link if specified */}
+        {showLearnMore && (
+          <div className="mt-12 text-right">
+            <Link href="/works" className="text-white hover:text-gray-300 transition-colors text-sm">
+              Learn More
+            </Link>
+          </div>
+        )}
       </div>
-    </section>
-
+    </div>
   );
 };
 

@@ -20,8 +20,8 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
       <div className="container mx-auto">
         {/* Title aligned with the milestone column */}
         <div className="flex">
-          <div className="w-1/2"></div>
-          <div className="w-1/2">
+          <div className="hidden lg:block w-1/2"></div>
+          <div className="w-full lg:w-1/2">
             <motion.h2 
               className="text-6xl font-bold mb-16"
               initial={{ opacity: 0, y: 20 }}
