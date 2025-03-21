@@ -71,7 +71,7 @@ export default function About() {
                     <motion.div
                         id='initial-about'
                         ref={bioRef}
-                        className="mt-10 max-w-full text-xl md:text-[2.5rem] font-normal leading-relaxed"
+                        className="mt-10 max-w-full text-3xl sm:text-4xl md:text-[2.5rem] font-normal leading-relaxed"
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                     >

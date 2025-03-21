@@ -45,7 +45,7 @@ const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
           year={yearData.year}
           yearLabel={yearData.yearLabel}
           // Don't show "Learn More" except on the last table
-          showLearnMore={index === yearsData.length - 1}
+          showLearnMore={index === yearsData.length }
         />
       ))}
     </motion.section>

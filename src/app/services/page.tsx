@@ -1,13 +1,17 @@
 "use client";
 
-import React from 'react'
+import React, { useRef } from 'react';
 import LearnMoreLink from '@/components/LearnMoreLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
+import { motion, useInView } from "framer-motion";
+
 
 
 export default function Services() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false, amount: 0.2 });
 
     const eventsData = [
         {
@@ -122,12 +126,22 @@ export default function Services() {
 
 
     return (
-        <div className=''>
+        <motion.div
+            ref={ref}
+            className=''
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6 }}
+        >
 
             <div className='container mx-auto h-screen w-full flex flex-col items-center justify-center text-white relative'>
-                <div className='w-full'>
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className='w-full'>
                     <h2 className="uppercase text-6xl font-bold mb-16 md:ml-[16.666%]">Services.</h2>
-                </div>
+                </motion.div>
 
                 <div className='flex flex-col gap-30 md:flex-row xl:px-30 w-full items-center justify-between h-[20rem]'>
                     <div className='px-4 w-full sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-full flex flex-col gap-8'>
@@ -189,6 +203,6 @@ export default function Services() {
                 </div>
             </section>
 
-        </div>
+        </motion.div>
     )
 }
