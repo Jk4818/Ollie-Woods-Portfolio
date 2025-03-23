@@ -12,12 +12,12 @@ import EventsTable from "@/components/EventsTable";
 import { Event } from "@/components/EventsTable";
 
 const images = [
-  "https://picsum.photos/300/400",
-  "https://picsum.photos/200/400",
-  "https://picsum.photos/600/400",
-  "https://picsum.photos/500/400",
-  "https://picsum.photos/500/500",
-  "https://picsum.photos/300/600",
+  "/images/gallery/Spies_Gillian_Lynne.jpg",
+  "/images/gallery/0X5A7601.jpg",
+  "/images/gallery/0x5a7374.jpg",
+  "/images/gallery/0x5a7757.jpg",
+  "/images/gallery/40X5A8925.jpg",
+  
 ];
 
 export default function Home() {
@@ -25,29 +25,32 @@ export default function Home() {
   // Event data based on the design
   const events: Event[] = [
     {
-      date: "MAY 03",
-      artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-      venue: "@ LONDON PALLADIUM (UK)",
-      detailsLink: "/events/may-03-2025"
+      date: "26th & 27th April",
+      artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
+      venue: "London Palladium",
+      detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/",
     },
     {
-      date: "JUNE 30",
-      artists: "LAYTON & NIKITA LIVE!",
-      venue: "@ LONDON PALLADIUM (UK)",
-      detailsLink: "/events/june-30-2025"
+      date: "10th April",
+      artists: "Eden Rain",
+      venue: "The Hope & Ruin, Brighton",
+      detailsLink:
+        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
     },
     {
-      date: "MAY 03",
-      artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-      venue: "@ LONDON PALLADIUM (UK)",
-      detailsLink: "/events/may-03-2025-2"
+      date: "9th April",
+      artists: "Eden Rain",
+      venue: "Scala, London",
+      detailsLink:
+        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
     },
     {
-      date: "JUNE 30",
-      artists: "LAYTON & NIKITA LIVE!",
-      venue: "@ LONDON PALLADIUM (UK)",
-      detailsLink: "/events/june-30-2025-2"
-    }
+      date: "8th April",
+      artists: "Eden Rain",
+      venue: "Rough Trade, Bristol",
+      detailsLink:
+        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+    },
   ];
   return (
     <>
@@ -111,7 +114,7 @@ export default function Home() {
           {/* Left side - Main image (2/3 width on desktop) */}
           <div className=" w-full h-96 lg:h-full lg:w-2/3 col-span-1 flex items-end">
             <MotionImage
-              src="/images/gallery/profile_hoxton.JPG"
+              src="/images/gallery/0X5A7608.jpg"
               alt="Ollie Woods at Hoxton"
               className="w-full h-auto"
             />

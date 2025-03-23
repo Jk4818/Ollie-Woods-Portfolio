@@ -9,10 +9,12 @@ __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$react$2f$esm$2f$embla$2d$carousel$2d$react$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/embla-carousel-react/esm/embla-carousel-react.esm.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$auto$2d$scroll$2f$esm$2f$embla$2d$carousel$2d$auto$2d$scroll$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/embla-carousel-auto-scroll/esm/embla-carousel-auto-scroll.esm.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 const ImageSlideshow = ({ slides })=>{
@@ -20,8 +22,8 @@ const ImageSlideshow = ({ slides })=>{
     const [emblaRef] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$react$2f$esm$2f$embla$2d$carousel$2d$react$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])({
         loop: true,
         dragFree: true,
-        align: 'start',
-        containScroll: 'trimSnaps'
+        align: "start",
+        containScroll: "trimSnaps"
     }, [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$auto$2d$scroll$2f$esm$2f$embla$2d$carousel$2d$auto$2d$scroll$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])({
             playOnInit: true,
@@ -34,29 +36,31 @@ const ImageSlideshow = ({ slides })=>{
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "embla__container flex",
             children: slides.map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "embla__slide flex-[0_0_calc(33.33%)]",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    className: "embla__slide flex-[0_0_calc(33.33%)] relative w-full h-[30rem]",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: src,
                         alt: `Slide ${index + 1}`,
-                        className: "w-full h-[300px] object-cover rounded"
+                        fill: true,
+                        className: "object-cover rounded",
+                        unoptimized: src.startsWith("http") && !src.includes("/_next/image")
                     }, void 0, false, {
                         fileName: "[project]/src/components/ImageSlideshow.tsx",
-                        lineNumber: 28,
+                        lineNumber: 26,
                         columnNumber: 13
                     }, this)
                 }, index, false, {
                     fileName: "[project]/src/components/ImageSlideshow.tsx",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/components/ImageSlideshow.tsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ImageSlideshow.tsx",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 };
@@ -552,12 +556,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 const images = [
-    "https://picsum.photos/300/400",
-    "https://picsum.photos/200/400",
-    "https://picsum.photos/600/400",
-    "https://picsum.photos/500/400",
-    "https://picsum.photos/500/500",
-    "https://picsum.photos/300/600"
+    "/images/gallery/Spies_Gillian_Lynne.jpg",
+    "/images/gallery/0X5A7601.jpg",
+    "/images/gallery/0x5a7374.jpg",
+    "/images/gallery/0x5a7757.jpg",
+    "/images/gallery/40X5A8925.jpg"
 ];
 function Home() {
     _s();
@@ -565,28 +568,28 @@ function Home() {
     // Event data based on the design
     const events = [
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025"
+            date: "26th & 27th April",
+            artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
+            venue: "London Palladium",
+            detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/"
         },
         {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025"
+            date: "10th April",
+            artists: "Eden Rain",
+            venue: "The Hope & Ruin, Brighton",
+            detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
         },
         {
-            date: "MAY 03",
-            artists: "JASON ROBERT BROWN, CYNTHIA ERIVO, & ALFIE BOE",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/may-03-2025-2"
+            date: "9th April",
+            artists: "Eden Rain",
+            venue: "Scala, London",
+            detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
         },
         {
-            date: "JUNE 30",
-            artists: "LAYTON & NIKITA LIVE!",
-            venue: "@ LONDON PALLADIUM (UK)",
-            detailsLink: "/events/june-30-2025-2"
+            date: "8th April",
+            artists: "Eden Rain",
+            venue: "Rough Trade, Bristol",
+            detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -622,12 +625,12 @@ function Home() {
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -648,7 +651,7 @@ function Home() {
                                         children: "Session Drummer"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -656,19 +659,19 @@ function Home() {
                                         children: "London"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 88,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 79,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 56,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -690,7 +693,7 @@ function Home() {
                                 children: "Scroll To Explore"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 97,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -709,19 +712,19 @@ function Home() {
                                 children: "↓"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 98,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 90,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 55,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -734,17 +737,17 @@ function Home() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " w-full h-96 lg:h-full lg:w-2/3 col-span-1 flex items-end",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                src: "/images/gallery/profile_hoxton.JPG",
+                                src: "/images/gallery/0X5A7608.jpg",
                                 alt: "Ollie Woods at Hoxton",
                                 className: "w-full h-auto"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/page.tsx",
-                                lineNumber: 113,
+                                lineNumber: 116,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 112,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -758,7 +761,7 @@ function Home() {
                                             children: "BIO."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
-                                            lineNumber: 124,
+                                            lineNumber: 127,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -775,7 +778,7 @@ function Home() {
                                                                 children: "in-demand session drummer"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 133,
                                                                 columnNumber: 39
                                                             }, this),
                                                             "working with internationally acclaimed artists. This diverse portfolio has seen him perform with ",
@@ -784,7 +787,7 @@ function Home() {
                                                                 children: "Cynthia Erivo"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 132,
+                                                                lineNumber: 135,
                                                                 columnNumber: 34
                                                             }, this),
                                                             " at the London Palladium, tour Asia with ",
@@ -793,7 +796,7 @@ function Home() {
                                                                 children: "Samantha Barks"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 133,
+                                                                lineNumber: 136,
                                                                 columnNumber: 47
                                                             }, this),
                                                             ", and work on projects for ",
@@ -802,14 +805,14 @@ function Home() {
                                                                 children: "Universal Production and BBC Radio 1"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 134,
+                                                                lineNumber: 137,
                                                                 columnNumber: 37
                                                             }, this),
                                                             ". His primary work lies in the pop/rock genre, yet his experience enables him to comfortably adapt to any performance environment."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 132,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -821,7 +824,7 @@ function Home() {
                                                                 children: "library of transcription and performance"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 139,
+                                                                lineNumber: 142,
                                                                 columnNumber: 40
                                                             }, this),
                                                             " videos for the drumming community on Instagram, with a combined audience of over ",
@@ -830,31 +833,31 @@ function Home() {
                                                                 children: "100,000"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.tsx",
-                                                                lineNumber: 141,
+                                                                lineNumber: 144,
                                                                 columnNumber: 29
                                                             }, this),
                                                             " across social media. Ollie is constantly seeking out new musical ventures and welcomes the opportunity to work with exciting artists and bands."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/page.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 141,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/page.tsx",
-                                                lineNumber: 128,
+                                                lineNumber: 131,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 129,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 125,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,29 +867,29 @@ function Home() {
                                         target: ""
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 155,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 121,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 110,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 109,
+                lineNumber: 112,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -896,12 +899,12 @@ function Home() {
                     slides: images
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 161,
+                    lineNumber: 164,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 160,
+                lineNumber: 163,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EventsTable$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -909,7 +912,7 @@ function Home() {
                 title: "Selected Works."
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 165,
+                lineNumber: 168,
                 columnNumber: 7
             }, this)
         ]

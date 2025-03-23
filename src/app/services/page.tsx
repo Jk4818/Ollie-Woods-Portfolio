@@ -5,7 +5,7 @@ import LearnMoreLink from '@/components/LearnMoreLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
-import { motion, useInView,  } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 // Animation variants
 const fadeInUp = {
@@ -88,6 +88,21 @@ export default function Services() {
     const eventsRef = useRef(null);
     const isEventsInView = useInView(eventsRef, { once: false, amount: 0.2 });
 
+    const endImageRef = useRef(null);
+    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.3 });
+
+    const { scrollYProgress: startImageScroll } = useScroll({
+        target: startImageRef,
+        offset: ["start end", "end start"]
+    });
+
+    const { scrollYProgress: endImageScroll } = useScroll({
+        target: endImageRef,
+        offset: ["start end", "end start"]
+    });
+
+    const startImageScale = useTransform(startImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
+    const endImageScale = useTransform(endImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
 
     const eventsData = [
         {
@@ -438,13 +453,13 @@ export default function Services() {
             </motion.section>
 
             <motion.section
-                // ref={endImageRef}
-                // id='services_end_image'
+                ref={endImageRef}
+                id='services_end_image'
                 className="w-full h-[80vh] text-white"
-                // initial="hidden"
-                // animate={isEndImageInView ? "visible" : "exit"}
-                // variants={fadeIn}
-                // custom={0.2}
+                initial="hidden"
+                animate={isEndImageInView ? "visible" : "exit"}
+                variants={fadeIn}
+                custom={0.2}
             >
                 <div className="w-full h-full flex items-start overflow-hidden">
                     <MotionImage

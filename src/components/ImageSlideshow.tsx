@@ -1,40 +1,40 @@
-import React, { useEffect } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import AutoScroll from 'embla-carousel-auto-scroll'
+import React from "react";
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 type PropType = {
-  slides: string[] // Array of image URLs
-}
+  slides: string[]; // Array of image URLs
+};
 
 const ImageSlideshow: React.FC<PropType> = ({ slides }) => {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
       dragFree: true,
-      align: 'start',
-      containScroll: 'trimSnaps',
+      align: "start",
+      containScroll: "trimSnaps",
     },
     [AutoScroll({ playOnInit: true, speed: 1 })]
-  )
+  );
 
   return (
     <div className="embla overflow-hidden" ref={emblaRef}>
       <div className="embla__container flex">
         {slides.map((src, index) => (
-          <div 
-            key={index} 
-            className="embla__slide flex-[0_0_calc(33.33%)]"
-          >
-            <img
+          <div key={index} className="embla__slide flex-[0_0_calc(33.33%)] relative w-full h-[30rem]">
+            <Image
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[300px] object-cover rounded"
+              fill // Makes the image responsive within the div
+              className="object-cover rounded"
+              unoptimized={src.startsWith("http") && !src.includes("/_next/image")}
             />
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ImageSlideshow
+export default ImageSlideshow;
