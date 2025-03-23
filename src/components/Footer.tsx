@@ -37,7 +37,7 @@ const Footer = () => {
                   transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                 >
                   <Link
-                    href={item === "PATREON" ? "https://www.patreon.com/ow" : `/${item.toLowerCase()}`}
+                    href={item === "PATREON" ? "https://patreon.com/OllieWoodsDrums" : `/${item.toLowerCase()}`}
                     target={item === "PATREON" ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-300 transition-colors text-sm"

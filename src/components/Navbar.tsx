@@ -81,7 +81,7 @@ const Navbar = () => {
           <Link 
             href="/" 
             onClick={(e) => isHomePage && handleNavClick(e, "hero")}
-            className="relative z-10"
+            className="relative z-10 "
             aria-label="Home"
           >
             <Image

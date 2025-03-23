@@ -23,7 +23,7 @@ const MotionImage: React.FC<MotionImageProps> = ({ src, alt, className }) => {
 
       const translateImage = (e: MouseEvent) => {
         const { offsetWidth: width, offsetHeight: height } = imageHover;
-        let { offsetX: x, offsetY: y } = e;
+        const { offsetX: x, offsetY: y } = e;
 
         // Adjust the translation speed (slower movement)
         const xWalk = Math.round((x / width * 100) - 50) / 6; // Reduced divisor for slower translation

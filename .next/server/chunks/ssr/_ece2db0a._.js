@@ -17,43 +17,36 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$car
 const ImageSlideshow = ({ slides })=>{
     const [emblaRef] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$react$2f$esm$2f$embla$2d$carousel$2d$react$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])({
         loop: true,
-        skipSnaps: false,
+        dragFree: true,
         align: 'start',
         containScroll: 'trimSnaps'
     }, [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$embla$2d$carousel$2d$auto$2d$scroll$2f$esm$2f$embla$2d$carousel$2d$auto$2d$scroll$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])({
-            playOnInit: true
+            playOnInit: true,
+            speed: 1
         })
-    ] // Auto-scroll plugin with 3-second delay
-    );
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "embla relative",
+        className: "embla overflow-hidden",
         ref: emblaRef,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "embla__viewport overflow-hidden",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "embla__container flex",
-                children: slides.slice(0, 3).map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "embla__slide w-1/3",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                            src: src,
-                            alt: `Slide ${index + 1}`,
-                            className: "w-full h-[300px] object-cover"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ImageSlideshow.tsx",
-                            lineNumber: 26,
-                            columnNumber: 15
-                        }, this)
-                    }, index, false, {
+            className: "embla__container flex",
+            children: slides.map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "embla__slide flex-[0_0_calc(33.33%)]",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: src,
+                        alt: `Slide ${index + 1}`,
+                        className: "w-full h-[300px] object-cover rounded"
+                    }, void 0, false, {
                         fileName: "[project]/src/components/ImageSlideshow.tsx",
-                        lineNumber: 25,
+                        lineNumber: 28,
                         columnNumber: 13
-                    }, this))
-            }, void 0, false, {
-                fileName: "[project]/src/components/ImageSlideshow.tsx",
-                lineNumber: 23,
-                columnNumber: 9
-            }, this)
+                    }, this)
+                }, index, false, {
+                    fileName: "[project]/src/components/ImageSlideshow.tsx",
+                    lineNumber: 24,
+                    columnNumber: 11
+                }, this))
         }, void 0, false, {
             fileName: "[project]/src/components/ImageSlideshow.tsx",
             lineNumber: 22,
@@ -94,7 +87,7 @@ const MotionImage = ({ src, alt, className })=>{
             imageHover.style.transition = "transform 0.3s ease-out"; // Smooth transition for scaling and translation
             const translateImage = (e)=>{
                 const { offsetWidth: width, offsetHeight: height } = imageHover;
-                let { offsetX: x, offsetY: y } = e;
+                const { offsetX: x, offsetY: y } = e;
                 // Adjust the translation speed (slower movement)
                 const xWalk = Math.round(x / width * 100 - 50) / 6; // Reduced divisor for slower translation
                 const yWalk = Math.round(y / height * 100 - 50) / 8; // Reduced divisor for slower translation
@@ -842,7 +835,7 @@ function Home() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "landingCarousel",
-                className: "w-full bg-black text-white",
+                className: "w-full overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ImageSlideshow$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     slides: images
                 }, void 0, false, {
@@ -860,7 +853,7 @@ function Home() {
                 title: "Selected Works."
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 167,
+                lineNumber: 165,
                 columnNumber: 7
             }, this)
         ]

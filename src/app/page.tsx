@@ -157,10 +157,8 @@ export default function Home() {
       </section>
 
       {/* Image gallery (3 images in a row) */}
-      <section id="landingCarousel" className="w-full bg-black text-white">
-        <ImageSlideshow
-          slides={images}
-        />
+      <section id="landingCarousel" className="w-full overflow-hidden">
+        <ImageSlideshow slides={images} />
       </section>
 
       {/* Selected Works Section - Using the imported component */}

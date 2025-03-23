@@ -438,7 +438,7 @@ const MotionImage = ({ src, alt, className })=>{
                 const translateImage = {
                     "MotionImage.useEffect.translateImage": (e)=>{
                         const { offsetWidth: width, offsetHeight: height } = imageHover;
-                        let { offsetX: x, offsetY: y } = e;
+                        const { offsetX: x, offsetY: y } = e;
                         // Adjust the translation speed (slower movement)
                         const xWalk = Math.round(x / width * 100 - 50) / 6; // Reduced divisor for slower translation
                         const yWalk = Math.round(y / height * 100 - 50) / 8; // Reduced divisor for slower translation
@@ -811,7 +811,7 @@ function Services() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "services_start_image",
-                className: "w-full h-[50vh] bg-black text-white",
+                className: "w-full h-[50vh] text-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: " w-full h-full  flex items-end",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -851,9 +851,9 @@ function Services() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "services_end_image",
-                className: "w-full h-[80vh] bg-black text-white",
+                className: "w-full h-[80vh] text-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: " w-full h-full  flex items-end",
+                    className: " w-full h-full  flex items-start",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         src: "/images/gallery/profile_hoxton.JPG",
                         alt: "Ollie Woods at Hoxton",

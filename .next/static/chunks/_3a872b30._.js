@@ -31,7 +31,7 @@ const MotionImage = ({ src, alt, className })=>{
                 const translateImage = {
                     "MotionImage.useEffect.translateImage": (e)=>{
                         const { offsetWidth: width, offsetHeight: height } = imageHover;
-                        let { offsetX: x, offsetY: y } = e;
+                        const { offsetX: x, offsetY: y } = e;
                         // Adjust the translation speed (slower movement)
                         const xWalk = Math.round(x / width * 100 - 50) / 6; // Reduced divisor for slower translation
                         const yWalk = Math.round(y / height * 100 - 50) / 8; // Reduced divisor for slower translation
@@ -122,22 +122,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/utils/use-in-view.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/animation/hooks/use-animation.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 ;
 ;
 const KeyMilestones = ({ milestones })=>{
     _s();
-    const [showAll, setShowAll] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const controls = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAnimation"])();
-    const expandControls = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAnimation"])(); // Controls for expanded milestones
     const isInView = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useInView"])(ref, {
         once: false,
         amount: 0.2,
         margin: "0px 0px -100px 0px"
     });
+    // Use effects to trigger animations when in view
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "KeyMilestones.useEffect": ()=>{
             if (isInView) {
@@ -149,18 +147,6 @@ const KeyMilestones = ({ milestones })=>{
     }["KeyMilestones.useEffect"], [
         isInView,
         controls
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "KeyMilestones.useEffect": ()=>{
-            if (showAll) {
-                expandControls.start("visible");
-            } else {
-                expandControls.start("hidden");
-            }
-        }
-    }["KeyMilestones.useEffect"], [
-        showAll,
-        expandControls
     ]);
     // Animation variants
     const titleVariants = {
@@ -178,7 +164,7 @@ const KeyMilestones = ({ milestones })=>{
                     1,
                     0.36,
                     1
-                ]
+                ] // Custom easing for smoother motion
             }
         }
     };
@@ -214,42 +200,6 @@ const KeyMilestones = ({ milestones })=>{
                 }
             })
     };
-    const expandVariants = {
-        hidden: {
-            opacity: 0,
-            height: 0
-        },
-        visible: {
-            opacity: 1,
-            height: "auto",
-            transition: {
-                duration: 0.5,
-                ease: [
-                    0.22,
-                    1,
-                    0.36,
-                    1
-                ]
-            }
-        }
-    };
-    const lineVariants = {
-        hidden: {
-            scaleX: 0
-        },
-        visible: {
-            scaleX: 1,
-            transition: {
-                duration: 0.5,
-                ease: [
-                    0.22,
-                    1,
-                    0.36,
-                    1
-                ]
-            }
-        }
-    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         ref: ref,
         id: "milestones",
@@ -264,7 +214,7 @@ const KeyMilestones = ({ milestones })=>{
                             className: "hidden lg:block w-1/2"
                         }, void 0, false, {
                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 72,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -277,18 +227,18 @@ const KeyMilestones = ({ milestones })=>{
                                 children: "KEY MILESTONES."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 74,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 73,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 71,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -301,13 +251,14 @@ const KeyMilestones = ({ milestones })=>{
                                 initial: "hidden",
                                 animate: controls,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    className: "border-b-2 border-white",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                             className: "py-4 text-left w-1/2 text-base uppercase font-bold",
                                             children: "Date"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 96,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -315,158 +266,80 @@ const KeyMilestones = ({ milestones })=>{
                                             children: "Milestone"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 91,
+                                            lineNumber: 97,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 95,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 88,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                                children: [
-                                    milestones.slice(0, 4).map((milestone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].tr, {
-                                            className: "border-t-2 border-white",
-                                            custom: index,
-                                            variants: rowVariants,
-                                            initial: "hidden",
-                                            animate: controls,
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].td, {
-                                                    className: "py-6 pr-4 text-left w-1/2 text-sm md:text-base",
-                                                    children: milestone.date
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                    lineNumber: 104,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].td, {
-                                                    className: "py-6 text-left w-1/2 text-sm md:text-base",
-                                                    children: milestone.milestone
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                    lineNumber: 107,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, index, true, {
-                                            fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 96,
-                                            columnNumber: 17
-                                        }, this)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                        children: showAll && milestones.slice(4).map((milestone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].tr, {
-                                                className: "border-t-2 border-white",
-                                                custom: index,
-                                                variants: expandVariants,
-                                                initial: "hidden",
-                                                animate: "visible",
-                                                exit: "hidden",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].td, {
-                                                        className: "py-6 pr-4 text-left w-1/2 text-sm md:text-base",
-                                                        children: milestone.date
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                        lineNumber: 126,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].td, {
-                                                        className: "py-6 text-left w-1/2 text-sm md:text-base",
-                                                        children: milestone.milestone
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                        lineNumber: 129,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                ]
-                                            }, index + 4, true, {
+                                children: milestones.map((milestone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].tr, {
+                                        className: "border-t-2 border-white",
+                                        custom: index,
+                                        variants: rowVariants,
+                                        initial: "hidden",
+                                        animate: controls,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "py-6 pr-4 text-left w-1/2 text-sm md:text-base",
+                                                children: milestone.date
+                                            }, void 0, false, {
                                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                lineNumber: 117,
-                                                columnNumber: 21
-                                            }, this))
-                                    }, void 0, false, {
+                                                lineNumber: 110,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "py-6 text-left w-1/2 text-sm md:text-base",
+                                                children: milestone.milestone
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/KeyMilestones.tsx",
+                                                lineNumber: 113,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, index, true, {
                                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                                        lineNumber: 114,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                        lineNumber: 102,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 94,
+                                lineNumber: 100,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                        lineNumber: 87,
+                        lineNumber: 89,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 86,
+                    lineNumber: 88,
                     columnNumber: 9
-                }, this),
-                milestones.length > 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                    className: "flex justify-end mt-6",
-                    initial: {
-                        opacity: 0,
-                        y: 10
-                    },
-                    animate: {
-                        opacity: 1,
-                        y: 0
-                    },
-                    transition: {
-                        duration: 0.5,
-                        ease: [
-                            0.22,
-                            1,
-                            0.36,
-                            1
-                        ]
-                    },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                        className: "text-sm font-bold uppercase border px-4 py-2 rounded-md hover:bg-white hover:text-black transition-all",
-                        onClick: ()=>setShowAll(!showAll),
-                        whileHover: {
-                            scale: 1.05
-                        },
-                        whileTap: {
-                            scale: 0.95
-                        },
-                        children: showAll ? "Show Less" : "Show More"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/KeyMilestones.tsx",
-                        lineNumber: 147,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 141,
-                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/KeyMilestones.tsx",
-            lineNumber: 69,
+            lineNumber: 71,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/KeyMilestones.tsx",
-        lineNumber: 68,
+        lineNumber: 70,
         columnNumber: 5
     }, this);
 };
-_s(KeyMilestones, "Q0SYg0rGsbm0eFR2T7WAzU6Ic2w=", false, function() {
+_s(KeyMilestones, "UIi2J08+oX6Zm5UykwwdeRq70zI=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAnimation"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAnimation"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useInView"]
     ];
@@ -669,7 +542,7 @@ function About() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                 id: "initial-about",
                                 ref: bioRef,
-                                className: "mt-10 max-w-full text-xl md:text-[2.5rem] font-normal leading-relaxed",
+                                className: "mt-10 max-w-full text-3xl sm:text-4xl md:text-[2.5rem] font-normal leading-relaxed",
                                 initial: {
                                     opacity: 1
                                 },

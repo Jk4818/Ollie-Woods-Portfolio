@@ -703,6 +703,10 @@
     margin-block: calc(var(--spacing) * 10);
   }
 
+  .my-12 {
+    margin-block: calc(var(--spacing) * 12);
+  }
+
   .-mt-1 {
     margin-top: calc(var(--spacing) * -1);
   }
@@ -919,8 +923,20 @@
     height: 80vh;
   }
 
+  .h-\[100vh\] {
+    height: 100vh;
+  }
+
+  .h-\[110vh\] {
+    height: 110vh;
+  }
+
   .h-\[300px\] {
     height: 300px;
+  }
+
+  .h-\[1100vh\] {
+    height: 1100vh;
   }
 
   .h-auto {
@@ -1059,6 +1075,14 @@
     flex: 1;
   }
 
+  .flex-\[0_0_calc\(33\.33\%\)\] {
+    flex: 0 0 33.33%;
+  }
+
+  .flex-\[0_0_calc\(33\.33\%-16px\)\] {
+    flex: 0 0 calc(33.33% - 16px);
+  }
+
   .flex-none {
     flex: none;
   }
@@ -1159,6 +1183,10 @@
 
   .justify-end {
     justify-content: flex-end;
+  }
+
+  .justify-evenly {
+    justify-content: space-evenly;
   }
 
   .justify-start {
@@ -1265,6 +1293,10 @@
     place-self: end;
   }
 
+  .place-self-start {
+    place-self: start;
+  }
+
   .self-end {
     align-self: flex-end;
   }
@@ -1275,6 +1307,10 @@
 
   .justify-self-end {
     justify-self: flex-end;
+  }
+
+  .justify-self-start {
+    justify-self: flex-start;
   }
 
   .overflow-auto {
@@ -2195,20 +2231,6 @@
   }
 
   @media (width >= 40rem) {
-    .sm\:text-2xl {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-
-  @media (width >= 40rem) {
-    .sm\:text-3xl {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
-    }
-  }
-
-  @media (width >= 40rem) {
     .sm\:text-4xl {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -2470,12 +2492,6 @@
   }
 
   @media (width >= 64rem) {
-    .lg\:grid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (width >= 64rem) {
     .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -2533,20 +2549,8 @@
   }
 
   @media (width >= 80rem) {
-    .xl\:col-span-2 {
-      grid-column: span 2 / span 2;
-    }
-  }
-
-  @media (width >= 80rem) {
     .xl\:block {
       display: block;
-    }
-  }
-
-  @media (width >= 80rem) {
-    .xl\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
