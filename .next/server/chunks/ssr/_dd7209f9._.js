@@ -657,28 +657,52 @@ function Services() {
             yearLabel: "(INC. UPCOMING)",
             events: [
                 {
-                    date: "Apr 15 - Jun 20",
-                    artists: "The West End Orchestra",
-                    venue: "Royal Albert Hall, London",
-                    detailsLink: "/works/west-end-orchestra"
+                    date: "26th & 27th April",
+                    artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
+                    venue: "London Palladium",
+                    detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "10th April",
+                    artists: "Eden Rain",
+                    venue: "The Hope & Ruin, Brighton",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "9th April",
+                    artists: "Eden Rain",
+                    venue: "Scala, London",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
                 },
                 {
-                    date: "Jul 10 - Jul 15",
-                    artists: "Cynthia Erivo Solo Tour",
-                    venue: "The O2 Arena, London",
-                    detailsLink: "/works/cynthia-erivo-tour"
+                    date: "8th April",
+                    artists: "Eden Rain",
+                    venue: "Rough Trade, Bristol",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
+                },
+                {
+                    date: "6th April",
+                    artists: "Eden Rain",
+                    venue: "Yes, Manchester",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link"
+                },
+                {
+                    date: "5th April",
+                    artists: "Samantha Barks",
+                    venue: "London Palladium",
+                    detailsLink: "https://lwtheatres.co.uk/whats-on/samantha-barks-tlp/"
+                },
+                {
+                    date: "15th March",
+                    artists: "Rachel Croft",
+                    venue: "Festival À Toute Heure, Paris",
+                    detailsLink: "https://www.instagram.com/p/DHUAzNIOPY7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    date: "February",
+                    artists: "The Reunion: Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, Holly Ann Hull",
+                    venue: "China Tour",
+                    detailsLink: "https://www.gingerboy.me/the-reunion"
                 }
             ]
         },
@@ -687,34 +711,64 @@ function Services() {
             yearLabel: "(CURRENT)",
             events: [
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "20th & 21st December",
+                    artists: "A Very Naughty Christmas",
+                    venue: "Southwark Playhouse (Elephant)",
+                    detailsLink: "https://www.averynaughtychristmas.com"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "5th December",
+                    artists: "The Vice-Chancellor’s Awards",
+                    venue: "University Hall, Guildford",
+                    detailsLink: "https://www.instagram.com/p/DDO5OnStVNe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "30th November",
+                    artists: "So Cher",
+                    venue: "Heythrop Park, Oxford",
+                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "24th November",
+                    artists: "Dirty Rotten Scoundrels",
+                    venue: "London Palladium",
+                    detailsLink: "https://www.instagram.com/reel/DCy0BcTtFYO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 },
                 {
-                    date: "Aug 12 - Sep 18",
-                    artists: "Layton and Nikita Live!",
+                    date: "20th November",
+                    artists: "Eden Rain – BBC New Music Live",
+                    venue: "Square Chapel, Halifax",
+                    detailsLink: "https://www.youtube.com/watch?v=qRqbWN_41gE"
+                },
+                {
+                    date: "12th November",
+                    artists: "Eden Rain",
+                    venue: "Moth Club, London",
+                    detailsLink: "https://www.instagram.com/edenintherain/"
+                },
+                {
+                    date: "25th October",
+                    artists: "Armstrong",
+                    venue: "West End Centre, Hampshire",
+                    detailsLink: "https://www.instagram.com/armstrong_band/"
+                },
+                {
+                    date: "10th October",
+                    artists: "Great Scott",
+                    venue: "Elland Road, Leeds",
+                    detailsLink: "https://www.greatscottband.com"
+                },
+                {
+                    date: "6th October",
+                    artists: "Il Volo",
                     venue: "Theatre Royal Drury Lane, London",
-                    detailsLink: "/works/layton-nikita"
+                    detailsLink: "https://www.instagram.com/reel/DA2sfgIMz4z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    date: "28th September",
+                    artists: "Armstrong",
+                    venue: "The Star Inn, Guildford",
+                    detailsLink: "https://www.instagram.com/armstrong_band/"
                 }
             ]
         },
@@ -723,47 +777,71 @@ function Services() {
             yearLabel: "",
             events: [
                 {
-                    date: "Nov 10 - Dec 15",
-                    artists: "The Reunion",
-                    venue: "China Tour - Multiple Venues",
-                    detailsLink: "/works/reunion-china"
+                    date: "3rd September",
+                    artists: "Spies Are Forever",
+                    venue: "Gillian Lynne Theatre, London",
+                    detailsLink: "https://www.instagram.com/p/C_jKNzPy9w9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "28th August",
+                    artists: "Harry Baker",
+                    venue: "The Britannia, Guildford",
+                    detailsLink: "https://www.instagram.com/harrybakeruk/"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "19th July",
+                    artists: "Thotrio",
+                    venue: "Notting Hill Arts Club, London",
+                    detailsLink: "https://www.instagram.com/tho.trio/"
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "16th July",
+                    artists: "Layton & Nikita Live!",
+                    venue: "Theatre Royal Drury Lane, London",
+                    detailsLink: "https://www.instagram.com/reel/C9NMkTcIsXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "6th July",
+                    artists: "Armstrong",
+                    venue: "Haslemere Fringe Festival",
+                    detailsLink: "https://www.instagram.com/armstrong_band/"
                 },
                 {
-                    date: "Feb 5 - Mar 10",
-                    artists: "West End Live Festival",
-                    venue: "Trafalgar Square, London",
-                    detailsLink: "/works/west-end-live"
+                    date: "6th July",
+                    artists: "Emily Windham",
+                    venue: "Farnham House Hotel",
+                    detailsLink: "https://www.instagram.com/emilylaurra/"
+                },
+                {
+                    date: "30th June",
+                    artists: "Layton & Nikita Live!",
+                    venue: "Bridgewater Hall, Manchester",
+                    detailsLink: "https://www.instagram.com/p/C849whxodby/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    date: "15th June",
+                    artists: "So Cher",
+                    venue: "London Hippodrome",
+                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher"
+                },
+                {
+                    date: "3rd June",
+                    artists: "Playing Our Part: The West End Sings for Target Ovarian Cancer",
+                    venue: "Cadogan Hall, London",
+                    detailsLink: "https://www.instagram.com/reel/C7ylFTrMON2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    date: "28th May",
+                    artists: "Eden Rain",
+                    venue: "The Kazimier, Leeds",
+                    detailsLink: "https://www.instagram.com/edenintherain/"
                 }
             ]
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
         ref: mainRef,
-        className: "",
+        className: "h-max",
         initial: "hidden",
         animate: isMainInView ? "visible" : "hidden",
         variants: fadeIn,
@@ -786,12 +864,12 @@ function Services() {
                             children: "Services."
                         }, void 0, false, {
                             fileName: "[project]/src/app/services/page.tsx",
-                            lineNumber: 235,
+                            lineNumber: 342,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 227,
+                        lineNumber: 334,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -812,7 +890,7 @@ function Services() {
                                         children: "Transcriptions"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 255,
+                                        lineNumber: 362,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -822,7 +900,7 @@ function Services() {
                                         children: "I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you're looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 262,
+                                        lineNumber: 369,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -835,23 +913,23 @@ function Services() {
                                                 href: "https://patreon.com/OllieWoodsDrums"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/services/page.tsx",
-                                                lineNumber: 275,
+                                                lineNumber: 382,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 274,
+                                            lineNumber: 381,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 269,
+                                        lineNumber: 376,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 248,
+                                lineNumber: 355,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -868,7 +946,7 @@ function Services() {
                                         children: "Session & Performance Work"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 287,
+                                        lineNumber: 394,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -878,7 +956,7 @@ function Services() {
                                         children: "For session work, live performances, or other drumming-related services, feel free to get in touch via my contact page. Whether you need a drummer for recording, gigs, or other projects, I'd love to discuss how we can collaborate."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 295,
+                                        lineNumber: 402,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -891,30 +969,30 @@ function Services() {
                                             text: "Contact Me"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/services/page.tsx",
-                                            lineNumber: 308,
+                                            lineNumber: 415,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/services/page.tsx",
-                                        lineNumber: 303,
+                                        lineNumber: 410,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/services/page.tsx",
-                                lineNumber: 280,
+                                lineNumber: 387,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 244,
+                        lineNumber: 351,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 226,
+                lineNumber: 333,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -933,17 +1011,17 @@ function Services() {
                         className: "w-full h-auto"
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 325,
+                        lineNumber: 432,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/services/page.tsx",
-                    lineNumber: 324,
+                    lineNumber: 431,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 315,
+                lineNumber: 422,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -959,47 +1037,43 @@ function Services() {
                     yearsData: eventsData
                 }, void 0, false, {
                     fileName: "[project]/src/app/services/page.tsx",
-                    lineNumber: 342,
+                    lineNumber: 449,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 333,
+                lineNumber: 440,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
-                ref: endImageRef,
-                id: "services_end_image",
+                // ref={endImageRef}
+                // id='services_end_image'
                 className: "w-full h-[80vh] text-white",
-                initial: "hidden",
-                animate: isEndImageInView ? "visible" : "exit",
-                variants: fadeIn,
-                custom: 0.2,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "w-full h-full flex items-start overflow-hidden",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$MotionImage$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: "/images/gallery/profile_hoxton.JPG",
-                        alt: "Ollie Woods at Hoxton",
+                        alt: "asdasd",
                         className: "w-full h-auto"
                     }, void 0, false, {
                         fileName: "[project]/src/app/services/page.tsx",
-                        lineNumber: 358,
+                        lineNumber: 465,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/services/page.tsx",
-                    lineNumber: 357,
+                    lineNumber: 464,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/services/page.tsx",
-                lineNumber: 348,
+                lineNumber: 455,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/services/page.tsx",
-        lineNumber: 218,
+        lineNumber: 325,
         columnNumber: 9
     }, this);
 }

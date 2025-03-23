@@ -5,7 +5,7 @@ import LearnMoreLink from '@/components/LearnMoreLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView,  } from "framer-motion";
 
 // Animation variants
 const fadeInUp = {
@@ -70,6 +70,8 @@ const textReveal = {
     }
 };
 
+
+
 export default function Services() {
     const mainRef = useRef(null);
     const isMainInView = useInView(mainRef, { once: false, amount: 0.2 });
@@ -86,21 +88,6 @@ export default function Services() {
     const eventsRef = useRef(null);
     const isEventsInView = useInView(eventsRef, { once: false, amount: 0.2 });
 
-    const endImageRef = useRef(null);
-    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.3 });
-
-    const { scrollYProgress: startImageScroll } = useScroll({
-        target: startImageRef,
-        offset: ["start end", "end start"]
-    });
-
-    const { scrollYProgress: endImageScroll } = useScroll({
-        target: endImageRef,
-        offset: ["start end", "end start"]
-    });
-
-    const startImageScale = useTransform(startImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
-    const endImageScale = useTransform(endImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
 
     const eventsData = [
         {
@@ -108,107 +95,212 @@ export default function Services() {
             yearLabel: "(INC. UPCOMING)",
             events: [
                 {
-                    date: "Apr 15 - Jun 20",
-                    artists: "The West End Orchestra",
-                    venue: "Royal Albert Hall, London",
-                    detailsLink: "/works/west-end-orchestra"
+                    date: "26th & 27th April",
+                    artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
+                    venue: "London Palladium",
+                    detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "10th April",
+                    artists: "Eden Rain",
+                    venue: "The Hope & Ruin, Brighton",
+                    detailsLink:
+                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "9th April",
+                    artists: "Eden Rain",
+                    venue: "Scala, London",
+                    detailsLink:
+                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
-                    date: "Jul 10 - Jul 15",
-                    artists: "Cynthia Erivo Solo Tour",
-                    venue: "The O2 Arena, London",
-                    detailsLink: "/works/cynthia-erivo-tour"
-                }
-            ]
+                    date: "8th April",
+                    artists: "Eden Rain",
+                    venue: "Rough Trade, Bristol",
+                    detailsLink:
+                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                },
+                {
+                    date: "6th April",
+                    artists: "Eden Rain",
+                    venue: "Yes, Manchester",
+                    detailsLink:
+                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                },
+                {
+                    date: "5th April",
+                    artists: "Samantha Barks",
+                    venue: "London Palladium",
+                    detailsLink:
+                        "https://lwtheatres.co.uk/whats-on/samantha-barks-tlp/",
+                },
+                {
+                    date: "15th March",
+                    artists: "Rachel Croft",
+                    venue: "Festival À Toute Heure, Paris",
+                    detailsLink:
+                        "https://www.instagram.com/p/DHUAzNIOPY7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
+                    date: "February",
+                    artists:
+                        "The Reunion: Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, Holly Ann Hull",
+                    venue: "China Tour",
+                    detailsLink: "https://www.gingerboy.me/the-reunion",
+                },
+            ],
         },
         {
             year: "2024",
             yearLabel: "(CURRENT)",
             events: [
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "20th & 21st December",
+                    artists: "A Very Naughty Christmas",
+                    venue: "Southwark Playhouse (Elephant)",
+                    detailsLink: "https://www.averynaughtychristmas.com",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "5th December",
+                    artists: "The Vice-Chancellor’s Awards",
+                    venue: "University Hall, Guildford",
+                    detailsLink:
+                        "https://www.instagram.com/p/DDO5OnStVNe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "30th November",
+                    artists: "So Cher",
+                    venue: "Heythrop Park, Oxford",
+                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "24th November",
+                    artists: "Dirty Rotten Scoundrels",
+                    venue: "London Palladium",
+                    detailsLink:
+                        "https://www.instagram.com/reel/DCy0BcTtFYO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    date: "Aug 12 - Sep 18",
-                    artists: "Layton and Nikita Live!",
+                    date: "20th November",
+                    artists: "Eden Rain – BBC New Music Live",
+                    venue: "Square Chapel, Halifax",
+                    detailsLink: "https://www.youtube.com/watch?v=qRqbWN_41gE",
+                },
+                {
+                    date: "12th November",
+                    artists: "Eden Rain",
+                    venue: "Moth Club, London",
+                    detailsLink: "https://www.instagram.com/edenintherain/",
+                },
+                {
+                    date: "25th October",
+                    artists: "Armstrong",
+                    venue: "West End Centre, Hampshire",
+                    detailsLink: "https://www.instagram.com/armstrong_band/",
+                },
+                {
+                    date: "10th October",
+                    artists: "Great Scott",
+                    venue: "Elland Road, Leeds",
+                    detailsLink: "https://www.greatscottband.com",
+                },
+                {
+                    date: "6th October",
+                    artists: "Il Volo",
                     venue: "Theatre Royal Drury Lane, London",
-                    detailsLink: "/works/layton-nikita"
-                }
-            ]
+                    detailsLink:
+                        "https://www.instagram.com/reel/DA2sfgIMz4z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
+                    date: "28th September",
+                    artists: "Armstrong",
+                    venue: "The Star Inn, Guildford",
+                    detailsLink: "https://www.instagram.com/armstrong_band/",
+                },
+            ],
         },
         {
             year: "2023",
             yearLabel: "",
             events: [
                 {
-                    date: "Nov 10 - Dec 15",
-                    artists: "The Reunion",
-                    venue: "China Tour - Multiple Venues",
-                    detailsLink: "/works/reunion-china"
+                    date: "3rd September",
+                    artists: "Spies Are Forever",
+                    venue: "Gillian Lynne Theatre, London",
+                    detailsLink:
+                        "https://www.instagram.com/p/C_jKNzPy9w9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "28th August",
+                    artists: "Harry Baker",
+                    venue: "The Britannia, Guildford",
+                    detailsLink: "https://www.instagram.com/harrybakeruk/",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "19th July",
+                    artists: "Thotrio",
+                    venue: "Notting Hill Arts Club, London",
+                    detailsLink: "https://www.instagram.com/tho.trio/",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "16th July",
+                    artists: "Layton & Nikita Live!",
+                    venue: "Theatre Royal Drury Lane, London",
+                    detailsLink:
+                        "https://www.instagram.com/reel/C9NMkTcIsXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    date: "Oct 5 - Oct 20",
-                    artists: "Jason Robert Brown & Guests",
-                    venue: "London Palladium, London",
-                    detailsLink: "/works/jason-robert-brown"
+                    date: "6th July",
+                    artists: "Armstrong",
+                    venue: "Haslemere Fringe Festival",
+                    detailsLink: "https://www.instagram.com/armstrong_band/",
                 },
                 {
-                    date: "Feb 5 - Mar 10",
-                    artists: "West End Live Festival",
-                    venue: "Trafalgar Square, London",
-                    detailsLink: "/works/west-end-live"
-                }
+                    date: "6th July",
+                    artists: "Emily Windham",
+                    venue: "Farnham House Hotel",
+                    detailsLink: "https://www.instagram.com/emilylaurra/",
+                },
+                {
+                    date: "30th June",
+                    artists: "Layton & Nikita Live!",
+                    venue: "Bridgewater Hall, Manchester",
+                    detailsLink:
+                        "https://www.instagram.com/p/C849whxodby/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
+                    date: "15th June",
+                    artists: "So Cher",
+                    venue: "London Hippodrome",
+                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
+                },
+                {
+                    date: "3rd June",
+                    artists: "Playing Our Part: The West End Sings for Target Ovarian Cancer",
+                    venue: "Cadogan Hall, London",
+                    detailsLink:
+                        "https://www.instagram.com/reel/C7ylFTrMON2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
+                    date: "28th May",
+                    artists: "Eden Rain",
+                    venue: "The Kazimier, Leeds",
+                    detailsLink: "https://www.instagram.com/edenintherain/",
+                },
+                // {
+                //     date: "12th May",
+                //     artists: "So Cher",
+                //     venue: "Heythrop Park, Oxford",
+                //     detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
+                // },
+                // {
+                //     date: "24th March",
+                //     artists: "Jason Robert Brown, Cynthia Erivo, Alfie Boe",
+                //     venue: "London Palladium",
+                //     detailsLink:
+                //         "https://www.instagram.com/p/C48moqZLhdG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                // }
             ]
         }
     ];
@@ -217,7 +309,7 @@ export default function Services() {
     return (
         <motion.div
             ref={mainRef}
-            className=''
+            className='h-max'
             initial="hidden"
             animate={isMainInView ? "visible" : "hidden"}
             variants={fadeIn}
@@ -346,18 +438,18 @@ export default function Services() {
             </motion.section>
 
             <motion.section
-                ref={endImageRef}
-                id='services_end_image'
+                // ref={endImageRef}
+                // id='services_end_image'
                 className="w-full h-[80vh] text-white"
-                initial="hidden"
-                animate={isEndImageInView ? "visible" : "exit"}
-                variants={fadeIn}
-                custom={0.2}
+                // initial="hidden"
+                // animate={isEndImageInView ? "visible" : "exit"}
+                // variants={fadeIn}
+                // custom={0.2}
             >
                 <div className="w-full h-full flex items-start overflow-hidden">
                     <MotionImage
                         src="/images/gallery/profile_hoxton.JPG"
-                        alt="Ollie Woods at Hoxton"
+                        alt="asdasd"
                         className="w-full h-auto"
                     />
                 </div>

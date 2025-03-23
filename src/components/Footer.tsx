@@ -8,7 +8,7 @@ import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.2 });
+  const isInView = useInView(ref, { once: false, amount: 0.5 });
 
   return (
     <motion.footer

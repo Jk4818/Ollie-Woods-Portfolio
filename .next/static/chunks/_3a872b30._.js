@@ -118,12 +118,14 @@ __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/utils/use-in-view.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$hooks$2f$use$2d$animation$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/animation/hooks/use-animation.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 const KeyMilestones = ({ milestones })=>{
@@ -135,7 +137,6 @@ const KeyMilestones = ({ milestones })=>{
         amount: 0.2,
         margin: "0px 0px -100px 0px"
     });
-    // Use effects to trigger animations when in view
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "KeyMilestones.useEffect": ()=>{
             if (isInView) {
@@ -164,7 +165,7 @@ const KeyMilestones = ({ milestones })=>{
                     1,
                     0.36,
                     1
-                ] // Custom easing for smoother motion
+                ]
             }
         }
     };
@@ -207,38 +208,15 @@ const KeyMilestones = ({ milestones })=>{
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "container mx-auto",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hidden lg:block w-1/2"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 74,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-full lg:w-1/2",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
-                                className: "text-6xl font-bold mb-16",
-                                variants: titleVariants,
-                                initial: "hidden",
-                                animate: controls,
-                                children: "KEY MILESTONES."
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 76,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/KeyMilestones.tsx",
-                            lineNumber: 75,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
+                    className: "text-6xl font-bold mb-16",
+                    variants: titleVariants,
+                    initial: "hidden",
+                    animate: controls,
+                    children: "KEY MILESTONES."
+                }, void 0, false, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 73,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -254,30 +232,46 @@ const KeyMilestones = ({ milestones })=>{
                                     className: "border-b-2 border-white",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                            className: "py-4 text-left w-1/2 text-base uppercase font-bold",
+                                            className: "py-4 text-left text-base uppercase font-bold",
                                             children: "Date"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 71,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                            className: "py-4 text-left w-1/2 text-base uppercase font-bold",
-                                            children: "Milestone"
+                                            className: "py-4 text-left text-base uppercase font-bold",
+                                            children: "Event"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/KeyMilestones.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 72,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "py-4 text-left text-base uppercase font-bold",
+                                            children: "Location"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/KeyMilestones.tsx",
+                                            lineNumber: 73,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "py-4 text-left text-base uppercase font-bold",
+                                            children: "Details"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/KeyMilestones.tsx",
+                                            lineNumber: 74,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 70,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 90,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -289,52 +283,78 @@ const KeyMilestones = ({ milestones })=>{
                                         animate: controls,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                className: "py-6 pr-4 text-left w-1/2 text-sm md:text-base",
+                                                className: "py-6 pr-4 text-left text-sm md:text-base",
                                                 children: milestone.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 80,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                className: "py-6 text-left w-1/2 text-sm md:text-base",
+                                                className: "py-6 pr-4 text-left text-sm md:text-base",
                                                 children: milestone.milestone
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                                lineNumber: 113,
+                                                lineNumber: 81,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "py-6 pr-4 text-left text-sm md:text-base",
+                                                children: milestone.location
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/KeyMilestones.tsx",
+                                                lineNumber: 82,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                className: "py-6 text-left text-sm md:text-base",
+                                                children: milestone.details ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: milestone.details,
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "text-white hover:text-gray-300 transition-colors",
+                                                    children: "DETAILS"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/KeyMilestones.tsx",
+                                                    lineNumber: 85,
+                                                    columnNumber: 23
+                                                }, this) : "—"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/KeyMilestones.tsx",
+                                                lineNumber: 83,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 79,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/KeyMilestones.tsx",
-                                lineNumber: 100,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/KeyMilestones.tsx",
-                        lineNumber: 89,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/KeyMilestones.tsx",
-                    lineNumber: 88,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/KeyMilestones.tsx",
-            lineNumber: 71,
+            lineNumber: 60,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/KeyMilestones.tsx",
-        lineNumber: 70,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 };
@@ -474,32 +494,73 @@ function About() {
     // Sample milestone data (replace with your actual data)
     const milestones = [
         {
-            date: "May 03 2025",
-            milestone: "Jason Robert Brown, Cynthia Erivo, & Alfie Boe"
+            date: "2024",
+            milestone: "Transcription collaboration with Moises, Apple, Eloy Casagrande (Slipknot)",
+            location: "Remote Work",
+            details: "https://www.instagram.com/reel/DBOrixARd5E/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
             date: "2023",
-            milestone: "Layton & Nikita Live!"
+            milestone: "Annie Get Your Gun (West End Debut)",
+            location: "London Palladium",
+            details: "https://www.instagram.com/p/CqxibUvsK4G/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D"
         },
         {
-            date: "2023",
-            milestone: "Layton & Nikita Live!"
+            date: "2019",
+            milestone: "Enrolled at Berklee College of Music",
+            location: "Boston, MA, United States of America",
+            details: "https://www.instagram.com/p/Bw7wcYPAAht/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+            date: "2019",
+            milestone: "FTCL Drum Kit Diploma",
+            location: "Trinity College London",
+            details: "https://www.instagram.com/p/B2cCx3GgPvO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+            date: "2018",
+            milestone: "Internship with Tim Buell (Vic Firth, PAS, Zildjian)",
+            location: "Remote Work",
+            details: "https://www.instagram.com/timbuell/"
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+            date: "2017",
+            milestone: "LTCL Drum Kit Diploma",
+            location: "Trinity College London",
+            details: "https://www.instagram.com/p/BRMDfMpgb0e/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2020",
-            milestone: "Layton & Nikita Live!"
+            date: "2017",
+            milestone: "Young Drummer of the Year Competition",
+            location: "Leamington Spa",
+            details: "https://youtu.be/-Z6wZguksZk?si=Z7RDavWrC5C3mMCa"
+        },
+        {
+            date: "2016",
+            milestone: "Yamaha #FutureBeat Competition",
+            location: "Yamaha HQ, Milton Keynes",
+            details: "https://www.instagram.com/p/BN2aIRADgjq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+            date: "2015",
+            milestone: "ATCL Drum Kit Diploma",
+            location: "Trinity College London"
+        },
+        {
+            date: "2014",
+            milestone: "Grade 8 Drum Kit with Distinction",
+            location: "Trinity College London"
+        },
+        {
+            date: "2008",
+            milestone: "First Public Performance",
+            location: "Surrey",
+            details: "https://www.instagram.com/p/CCJyV32gbXq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+            date: "2007",
+            milestone: "First Drum Lesson",
+            location: "Surrey"
         }
     ];
     // Use the entire viewport height for the animation
@@ -536,7 +597,7 @@ function About() {
                                 children: "About."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 67,
+                                lineNumber: 109,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -554,18 +615,18 @@ function About() {
                                     text: "Ollie is a London-based session drummer working with a diverse roster of artists across the UK and internationally. He recently toured China with The Reunion featuring Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, and Holly Ann Hull. In 2024, he performed alongside Jason Robert Brown with guest stars Cynthia Erivo and Alfie Boe at the London Palladium, and played on the UK tour of Layton and Nikita Live! including two shows at Theatre Royal Drury Lane."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 120,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 71,
+                                lineNumber: 113,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 66,
+                        lineNumber: 108,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -574,7 +635,7 @@ function About() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 86,
+                        lineNumber: 128,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -616,28 +677,28 @@ function About() {
                                     strokeLinejoin: "round"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 142,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 99,
+                                lineNumber: 141,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/about/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 137,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 89,
+                        lineNumber: 131,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/about/page.tsx",
-                lineNumber: 64,
+                lineNumber: 106,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -667,17 +728,17 @@ function About() {
                                         className: "w-full h-auto"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 160,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 159,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 158,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -688,7 +749,7 @@ function About() {
                                         children: "About Cont."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 168,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -696,19 +757,19 @@ function About() {
                                         children: "Following in his sister's footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and is currently studying for a Doctorate in Music at the University of Surrey. This extensive scholarship with the likes of Kenwood Dennard and Victor Wooten transformed his drumming, leading to an exciting career in the music industry."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 171,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 125,
+                                lineNumber: 167,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 115,
+                        lineNumber: 157,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -716,24 +777,24 @@ function About() {
                             milestones: milestones
                         }, void 0, false, {
                             fileName: "[project]/src/app/about/page.tsx",
-                            lineNumber: 135,
+                            lineNumber: 177,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 134,
+                        lineNumber: 176,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/about/page.tsx",
-                lineNumber: 107,
+                lineNumber: 149,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/about/page.tsx",
-        lineNumber: 63,
+        lineNumber: 105,
         columnNumber: 9
     }, this);
 }

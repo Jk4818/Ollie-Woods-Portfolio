@@ -14,34 +14,76 @@ export default function About() {
     // Sample milestone data (replace with your actual data)
     const milestones: Milestone[] = [
         {
-            date: "May 03 2025",
-            milestone: "Jason Robert Brown, Cynthia Erivo, & Alfie Boe"
+          date: "2024",
+          milestone: "Transcription collaboration with Moises, Apple, Eloy Casagrande (Slipknot)",
+          location: "Remote Work",
+          details: "https://www.instagram.com/reel/DBOrixARd5E/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2023",
-            milestone: "Layton & Nikita Live!"
+          date: "2023",
+          milestone: "Annie Get Your Gun (West End Debut)",
+          location: "London Palladium",
+          details: "https://www.instagram.com/p/CqxibUvsK4G/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D"
         },
         {
-            date: "2023",
-            milestone: "Layton & Nikita Live!"
+          date: "2019",
+          milestone: "Enrolled at Berklee College of Music",
+          location: "Boston, MA, United States of America",
+          details: "https://www.instagram.com/p/Bw7wcYPAAht/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+          date: "2019",
+          milestone: "FTCL Drum Kit Diploma",
+          location: "Trinity College London",
+          details: "https://www.instagram.com/p/B2cCx3GgPvO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+          date: "2018",
+          milestone: "Internship with Tim Buell (Vic Firth, PAS, Zildjian)",
+          location: "Remote Work",
+          details: "https://www.instagram.com/timbuell/"
         },
         {
-            date: "2022",
-            milestone: "Layton & Nikita Live!"
+          date: "2017",
+          milestone: "LTCL Drum Kit Diploma",
+          location: "Trinity College London",
+          details: "https://www.instagram.com/p/BRMDfMpgb0e/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
         {
-            date: "2020",
-            milestone: "Layton & Nikita Live!"
+          date: "2017",
+          milestone: "Young Drummer of the Year Competition",
+          location: "Leamington Spa",
+          details: "https://youtu.be/-Z6wZguksZk?si=Z7RDavWrC5C3mMCa"
+        },
+        {
+          date: "2016",
+          milestone: "Yamaha #FutureBeat Competition",
+          location: "Yamaha HQ, Milton Keynes",
+          details: "https://www.instagram.com/p/BN2aIRADgjq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+          date: "2015",
+          milestone: "ATCL Drum Kit Diploma",
+          location: "Trinity College London"
+        },
+        {
+          date: "2014",
+          milestone: "Grade 8 Drum Kit with Distinction",
+          location: "Trinity College London"
+        },
+        {
+          date: "2008",
+          milestone: "First Public Performance",
+          location: "Surrey",
+          details: "https://www.instagram.com/p/CCJyV32gbXq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+          date: "2007",
+          milestone: "First Drum Lesson",
+          location: "Surrey"
         }
-    ];
+      ];
+      
 
     // Use the entire viewport height for the animation
     const { scrollYProgress } = useScroll({
