@@ -138,7 +138,7 @@ const EventsTable = ({
                   <td className="py-6 pr-4 text-left w-2/6 text-sm">{event.artists}</td>
                   <td className="py-6 pr-4 text-left w-2/6 text-sm">{event.venue}</td>
                   <td className="py-6 text-right w-1/6">
-                    <Link href={event.detailsLink} className="text-white hover:text-gray-300 transition-colors text-sm">
+                    <Link href={event.detailsLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors text-sm">
                       DETAILS
                     </Link>
                   </td>
