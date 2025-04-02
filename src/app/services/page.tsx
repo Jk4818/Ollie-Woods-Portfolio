@@ -70,26 +70,27 @@ const textReveal = {
     }
 };
 
-
-
 export default function Services() {
     const mainRef = useRef(null);
-    const isMainInView = useInView(mainRef, { once: false, amount: 0.2 });
+    // Use once: true to prevent elements from disappearing when scrolling
+    const isMainInView = useInView(mainRef, { once: false, amount: 0.1 });
 
     const titleRef = useRef(null);
-    const isTitleInView = useInView(titleRef, { once: false, amount: 0.8 });
+    // Use once: true so title stays visible once it appears
+    const isTitleInView = useInView(titleRef, { once: false, amount: 0.1 });
 
     const servicesRef = useRef(null);
-    const isServicesInView = useInView(servicesRef, { once: false, amount: 0.5 });
+    // Lower threshold for better mobile viewing
+    const isServicesInView = useInView(servicesRef, { once: false, amount: 0.1 });
 
     const startImageRef = useRef(null);
-    const isStartImageInView = useInView(startImageRef, { once: false, amount: 0.3 });
+    const isStartImageInView = useInView(startImageRef, { once: false, amount: 0.1 });
 
     const eventsRef = useRef(null);
-    const isEventsInView = useInView(eventsRef, { once: false, amount: 0.2 });
+    const isEventsInView = useInView(eventsRef, { once: false, amount: 0.1 });
 
     const endImageRef = useRef(null);
-    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.3 });
+    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.1 });
 
     const { scrollYProgress: startImageScroll } = useScroll({
         target: startImageRef,
@@ -101,9 +102,6 @@ export default function Services() {
         offset: ["start end", "end start"]
     });
 
-    const startImageScale = useTransform(startImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
-    const endImageScale = useTransform(endImageScroll, [0, 0.5, 1], [0.95, 1, 0.98]);
-
     const eventsData = [
         {
             year: "2025",
@@ -111,7 +109,7 @@ export default function Services() {
             events: [
                 {
                     date: "26th & 27th April",
-                    artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
+                    artists: "Starkid: I Can't Believe It's Been A Little Less Than A Year",
                     venue: "London Palladium",
                     detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/",
                 },
@@ -178,7 +176,7 @@ export default function Services() {
                 },
                 {
                     date: "5th December",
-                    artists: "The Vice-Chancellor’s Awards",
+                    artists: "The Vice-Chancellor's Awards",
                     venue: "University Hall, Guildford",
                     detailsLink:
                         "https://www.instagram.com/p/DDO5OnStVNe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -303,19 +301,6 @@ export default function Services() {
                     venue: "The Kazimier, Leeds",
                     detailsLink: "https://www.instagram.com/edenintherain/",
                 },
-                // {
-                //     date: "12th May",
-                //     artists: "So Cher",
-                //     venue: "Heythrop Park, Oxford",
-                //     detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
-                // },
-                // {
-                //     date: "24th March",
-                //     artists: "Jason Robert Brown, Cynthia Erivo, Alfie Boe",
-                //     venue: "London Palladium",
-                //     detailsLink:
-                //         "https://www.instagram.com/p/C48moqZLhdG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                // }
             ]
         }
     ];
@@ -330,17 +315,18 @@ export default function Services() {
             variants={fadeIn}
             custom={0}
         >
-            <div className='container mx-auto h-screen w-full flex flex-col items-center justify-center text-white relative'>
+            {/* Hero section - Made responsive with min-height instead of fixed height */}
+            <div className='container mx-auto min-h-screen w-full flex flex-col items-center justify-center text-white relative py-16 md:py-0'>
                 <motion.div
                     ref={titleRef}
                     initial="hidden"
-                    animate={isTitleInView ? "visible" : "exit"}
+                    animate={isTitleInView ? "visible" : "hidden"}
                     variants={fadeInUp}
                     custom={0}
                     className='w-full'
                 >
                     <motion.h2
-                        className="uppercase text-6xl font-bold mb-16 md:ml-[16.666%]"
+                        className="uppercase text-4xl md:text-6xl font-bold mb-8 md:mb-16 md:ml-[16.666%] px-4 md:px-0"
                         variants={textReveal}
                         custom={0}
                     >
@@ -348,14 +334,15 @@ export default function Services() {
                     </motion.h2>
                 </motion.div>
 
+                {/* Service cards - made responsive with flex-wrap */}
                 <div
                     ref={servicesRef}
-                    className='flex flex-col gap-30 md:flex-row xl:px-30 w-full items-center justify-between h-[20rem]'
+                    className='flex flex-col md:flex-row flex-wrap gap-12 md:gap-8 xl:px-12 w-full items-start justify-between min-h-[20rem] px-4'
                 >
                     <motion.div
-                        className='px-4 w-full sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-full flex flex-col gap-8'
+                        className='w-full lg:w-5/12 max-w-[34rem] flex flex-col gap-6 md:gap-8'
                         initial="hidden"
-                        animate={isServicesInView ? "visible" : "exit"}
+                        animate={isServicesInView ? "visible" : "hidden"}
                         variants={fadeInUp}
                         custom={1}
                     >
@@ -374,7 +361,7 @@ export default function Services() {
                             I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you're looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!
                         </motion.p>
                         <motion.div
-                            className='flex justify-end mt-auto uppercase'
+                            className='flex justify-end mt-4 md:mt-auto uppercase'
                             variants={fadeInUp}
                             custom={3}
                         >
@@ -385,9 +372,9 @@ export default function Services() {
                     </motion.div>
 
                     <motion.div
-                        className="px-4 w-full sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-full flex flex-col gap-8"
+                        className="w-full lg:w-5/12 max-w-[34rem] flex flex-col gap-6 md:gap-8"
                         initial="hidden"
-                        animate={isServicesInView ? "visible" : "exit"}
+                        animate={isServicesInView ? "visible" : "hidden"}
                         variants={fadeInUp}
                         custom={2}
                     >
@@ -408,7 +395,7 @@ export default function Services() {
                         </motion.p>
 
                         <motion.div
-                            className="flex justify-end mt-auto uppercase"
+                            className="flex justify-end mt-4 md:mt-auto uppercase"
                             variants={fadeInUp}
                             custom={3}
                         >
@@ -422,9 +409,9 @@ export default function Services() {
             <motion.section
                 ref={startImageRef}
                 id='services_start_image'
-                className="w-full h-[50vh] text-white"
+                className="w-full h-[40vh] md:h-[50vh] text-white"
                 initial="hidden"
-                animate={isStartImageInView ? "visible" : "exit"}
+                animate={isStartImageInView ? "visible" : "hidden"}
                 variants={fadeIn}
                 custom={0.2}
             >
@@ -432,7 +419,6 @@ export default function Services() {
                     <MotionImage
                         src="/images/gallery/profile_hoxton.JPG"
                         alt="Ollie Woods at Hoxton"
-                        className="w-full h-auto"
                     />
                 </div>
             </motion.section>
@@ -440,9 +426,9 @@ export default function Services() {
             <motion.section
                 ref={eventsRef}
                 id="events"
-                className="w-full text-white py-24 px-4 md:px-12"
+                className="w-full text-white py-16 md:py-24 px-4 md:px-12"
                 initial="hidden"
-                animate={isEventsInView ? "visible" : "exit"}
+                animate={isEventsInView ? "visible" : "hidden"}
                 variants={fadeInUp}
                 custom={0}
             >
@@ -455,17 +441,16 @@ export default function Services() {
             <motion.section
                 ref={endImageRef}
                 id='services_end_image'
-                className="w-full h-[80vh] text-white"
+                className="w-full h-[50vh] md:h-[80vh] text-white"
                 initial="hidden"
-                animate={isEndImageInView ? "visible" : "exit"}
+                animate={isEndImageInView ? "visible" : "hidden"}
                 variants={fadeIn}
                 custom={0.2}
             >
                 <div className="w-full h-full flex items-start overflow-hidden">
                     <MotionImage
                         src="/images/gallery/profile_hoxton.JPG"
-                        alt="asdasd"
-                        className="w-full h-auto"
+                        alt="Ollie Woods performing"
                     />
                 </div>
             </motion.section>
