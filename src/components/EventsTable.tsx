@@ -122,7 +122,7 @@ const EventsTable = ({
         </motion.div>
 
         {/* Desktop Table (hidden on small screens) */}
-        <div className="hidden lg:block w-full overflow-x-auto">
+        <div className="hidden lg:block w-full overflow-x-auto overflow-hidden">
           <table className="w-full border-collapse">
             <tbody>
               {events.map((event, index) => (
