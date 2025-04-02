@@ -23,7 +23,7 @@ const images = [
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (index) => ({
+  visible: (index : number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -32,7 +32,7 @@ const fadeInUp = {
       ease: [0.22, 1, 0.36, 1]
     }
   }),
-  exit: (index) => ({
+  exit: (index : number) => ({
     opacity: 0,
     y: -20,
     transition: {
@@ -45,7 +45,7 @@ const fadeInUp = {
 
 const textReveal = {
   hidden: { opacity: 0, y: 100 },
-  visible: (index) => ({
+  visible: (index : number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -65,7 +65,7 @@ const textReveal = {
 };
 const fadeIn = {
     hidden: { opacity: 0 },
-    visible: (delay) => ({
+    visible: (delay : number) => ({
         opacity: 1,
         transition: {
             duration: 0.8,

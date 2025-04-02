@@ -9,7 +9,7 @@ import AnimatedText from '@/components/AnimatedText';
 
 const fadeIn = {
     hidden: { opacity: 0 },
-    visible: (delay) => ({
+    visible: (delay : number) => ({
         opacity: 1,
         transition: {
             duration: 0.8,
@@ -197,7 +197,7 @@ export default function About() {
                             About Cont.
                         </h1>
                         <p className='indent-8 text-sm font-medium leading-relaxed'>
-                            Following in his sister's footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and is currently studying for a Doctorate in Music at the University of Surrey. This extensive scholarship with the likes of Kenwood Dennard and Victor Wooten transformed his drumming, leading to an exciting career in the music industry.
+                            Following in his sister&apos;s footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and is currently studying for a Doctorate in Music at the University of Surrey. This extensive scholarship with the likes of Kenwood Dennard and Victor Wooten transformed his drumming, leading to an exciting career in the music industry.
                         </p>
                     </div>
                 </section>

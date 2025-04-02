@@ -10,7 +10,7 @@ import { motion, useInView} from "framer-motion";
 // Animation variants
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: (index) => ({
+    visible: (index : number) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -19,7 +19,7 @@ const fadeInUp = {
             ease: [0.22, 1, 0.36, 1]
         }
     }),
-    exit: (index) => ({
+    exit: (index : number) => ({
         opacity: 0,
         y: -20,
         transition: {
@@ -32,7 +32,7 @@ const fadeInUp = {
 
 const fadeIn = {
     hidden: { opacity: 0 },
-    visible: (delay) => ({
+    visible: (delay : number) => ({
         opacity: 1,
         transition: {
             duration: 0.8,
@@ -51,7 +51,7 @@ const fadeIn = {
 
 const textReveal = {
     hidden: { opacity: 0, y: 100 },
-    visible: (index) => ({
+    visible: (index : number) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -350,7 +350,7 @@ export default function Services() {
                             variants={textReveal}
                             custom={2}
                         >
-                            I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you're looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!
+                            I offer detailed drum transcriptions, available exclusively on my Patreon. Whether you&apos;re looking to study intricate grooves, fills, or full song breakdowns, my transcriptions provide accurate, note-for-note insights to help you improve your playing. Check them out and gain access to a growing library of drum charts!
                         </motion.p>
                         <motion.div
                             className='flex justify-end mt-4 md:mt-auto uppercase'
@@ -383,7 +383,7 @@ export default function Services() {
                             variants={textReveal}
                             custom={2}
                         >
-                            For session work, live performances, or other drumming-related services, feel free to get in touch via my contact page. Whether you need a drummer for recording, gigs, or other projects, I'd love to discuss how we can collaborate.
+                            For session work, live performances, or other drumming-related services, feel free to get in touch via my contact page. Whether you need a drummer for recording, gigs, or other projects, I&apos;d love to discuss how we can collaborate.
                         </motion.p>
 
                         <motion.div
