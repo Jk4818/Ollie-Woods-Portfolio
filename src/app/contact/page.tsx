@@ -66,8 +66,8 @@ export default function Contact() {
 
           <ul className="uppercase text-end flex flex-col gap-2">
             {[
-              { name: "Instagram", link: "https://www.instagram.com/ow" },
-              { name: "Facebook", link: "https://www.facebook.com/ow" },
+              { name: "Instagram", link: "https://www.instagram.com/olliewoodsdrums" },
+              { name: "Facebook", link: "https://www.facebook.com/olliewoodsdrums" },
               { name: "Youtube", link: "https://www.youtube.com/channel/UCceB0EleKJcNx-fzM_VGv8Q?view_as=subscriber" },
               { name: "TikTok", link: "https://www.tiktok.com/@olliewoodsdrums" },
             ].map(({ name, link }, index) => (
