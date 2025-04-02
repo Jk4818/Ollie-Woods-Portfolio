@@ -18,8 +18,12 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Musician Portfolio",
-  description: "Portfolio website for a musician",
+  title: "Ollie Woods FTCL | Session Drummer",
+  description: "Professional session drummer based in London with over 10 years of experience. Specializing in jazz, funk, and rock styles with studio and touring capabilities.",
+  keywords: ["drummer", "session musician", "Ollie Woods", "FTCL", "London drummer", "professional drummer", "studio recording", "live performance"],
+  authors: [{ name: "Ollie Woods" }],
+  creator: "Ollie Woods",
+  publisher: "Ollie Woods",
 };
 
 export default function RootLayout({
