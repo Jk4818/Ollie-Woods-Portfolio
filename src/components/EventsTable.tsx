@@ -165,7 +165,7 @@ const EventsTable = ({
               <div className="text-sm font-medium mb-8 break-words">{event.artists}</div>
               <div className="flex justify-between items-center">
                 <div className="text-sm">{event.venue}</div>
-                <Link href={event.detailsLink} className="text-white hover:text-gray-300 transition-colors text-sm">
+                <Link href={event.detailsLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors text-sm">
                   DETAILS
                 </Link>
               </div>
