@@ -56,6 +56,18 @@ const Navbar = () => {
     }, 300); // Slightly longer than our animation duration
   }, [isMenuAnimating]);
   
+  // Function to close the mobile menu
+  const closeMobileMenu = useCallback(() => {
+    if (isMenuAnimating || !isMobileMenuOpen) return;
+    
+    setIsMenuAnimating(true);
+    setIsMobileMenuOpen(false);
+    
+    setTimeout(() => {
+      setIsMenuAnimating(false);
+    }, 300);
+  }, [isMenuAnimating, isMobileMenuOpen]);
+  
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     if (isHomePage) {
       e.preventDefault();
@@ -78,12 +90,12 @@ const Navbar = () => {
       
       <div className="container mx-auto px-4 relative">
         <nav className="flex justify-between items-center py-4">
-          {/* Logo */}
+          {/* Logo - modified to close menu on click */}
           <Link 
             href="/" 
-            onClick={(e) => isHomePage && handleNavClick(e, "hero")}
-            className="relative z-10 "
+            className="relative z-10"
             aria-label="Home"
+            onClick={closeMobileMenu}
           >
             <Image
               src="/logo_2025.svg"
@@ -181,13 +193,7 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <MobileDropdown
               isOpen={isMobileMenuOpen}
-              onClose={() => {
-                if (!isMenuAnimating) {
-                  setIsMenuAnimating(true);
-                  setIsMobileMenuOpen(false);
-                  setTimeout(() => setIsMenuAnimating(false), 300);
-                }
-              }}
+              onClose={closeMobileMenu}
               handleNavClick={handleNavClick}
               isHomePage={isHomePage}
               onAnimationComplete={() => setIsMenuAnimating(false)}

@@ -97,7 +97,7 @@ const EventsTable = ({
   const topPadding = title ? "py-24" : "pt-8 pb-24";
 
   return (
-    <div ref={ref} className={`w-full text-white ${topPadding} px-4 md:px-12 uppercase`}>
+    <div ref={ref} className={`w-full text-white ${topPadding} md:px-12 uppercase`}>
       <div className="container mx-auto">
         {/* Only render title if provided */}
         {title && (
@@ -121,13 +121,13 @@ const EventsTable = ({
           <span className="text-xl ml-4 opacity-70">{yearLabel}</span>
         </motion.div>
 
-        {/* Events Table */}
-        <div className="w-full overflow-x-auto overflow-hidden">
+        {/* Desktop Table (hidden on small screens) */}
+        <div className="hidden lg:block w-full overflow-x-auto">
           <table className="w-full border-collapse">
             <tbody>
               {events.map((event, index) => (
                 <motion.tr 
-                  key={index} 
+                  key={`desktop-${index}`} 
                   className="border-t-2 border-white"
                   custom={index}
                   variants={rowVariants}
@@ -146,6 +146,31 @@ const EventsTable = ({
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Cards (shown only on small screens) */}
+        <div className="lg:hidden">
+          {events.map((event, index) => (
+            <motion.div
+              key={`mobile-${index}`}
+              className="border-t-2 border-white py-4"
+              custom={index}
+              variants={rowVariants}
+              initial="hidden"
+              animate={controls}
+            >
+              <div className="flex justify-between items-start mb-2">
+                <div className="text-sm">{event.date}</div>
+              </div>
+              <div className="text-sm font-medium mb-8 break-words">{event.artists}</div>
+              <div className="flex justify-between items-center">
+                <div className="text-sm">{event.venue}</div>
+                <Link href={event.detailsLink} className="text-white hover:text-gray-300 transition-colors text-sm">
+                  DETAILS
+                </Link>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Only show "Learn More" link if specified */}

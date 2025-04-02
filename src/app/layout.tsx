@@ -33,8 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${inter.variable} `}>
-        <div className="min-h-screen">
+      <body className={`${lora.variable} ${inter.variable} bg-black text-white`}>
+        <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow px-4">{children}</main>
           <Footer />

@@ -44,7 +44,7 @@ const fadeInUp = {
 };
 
 const textReveal = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 10 },
   visible: (index : number) => ({
     opacity: 1,
     y: 0,
@@ -68,7 +68,7 @@ const fadeIn = {
     visible: (delay : number) => ({
         opacity: 1,
         transition: {
-            duration: 0.8,
+            duration: 0.3,
             delay: delay,
             ease: [0.22, 1, 0.36, 1]
         }
@@ -186,8 +186,8 @@ export default function Home() {
         ref={biographyRef}
         initial="hidden"
         animate={isBioInView ? "visible" : "hidden"}
-        variants={fadeInUp}
-        custom={1}
+        variants={fadeIn}
+        custom={0}
         className="w-full lg:h-[90vh] bg-black text-white">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left side - Main image (2/3 width on desktop) */}
@@ -208,7 +208,7 @@ export default function Home() {
                 custom={1}
                 className="text-6xl font-bold mt-10 lg:mt-0 mb-12 md:mb-16 lg:mb-20">BIO.</motion.h2>
               {/* Bio Text */}
-              <div className="grid grid-cols-3 ">
+              <div className="grid sm:grid-cols-3 ">
                 {/* Text Container */}
                 <div className="col-span-2 max-w-2xl text-sm font-medium leading-6 space-y-6 flex flex-col justify-end self-end">
                   <motion.p
@@ -242,7 +242,7 @@ export default function Home() {
             <motion.div
               variants={textReveal}
               custom={4}
-              className="text-right w-full mb-4">
+              className="text-right w-full my-4 sm:my-0 mb-4">
               <LearnMoreLink href="/about" target="" />
             </motion.div>
           </div>

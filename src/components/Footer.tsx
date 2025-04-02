@@ -28,7 +28,7 @@ const Footer = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-md font-bold mb-4">MENU</h3>
+            <h3 className="text-sm md:text-md font-bold mb-4">MENU</h3>
             <ul>
               {["ABOUT", "SERVICES", "CONTACT", "PATREON"].map((item, index) => (
                 <motion.li
@@ -41,7 +41,7 @@ const Footer = () => {
                     href={item === "PATREON" ? "https://patreon.com/OllieWoodsDrums" : `/${item.toLowerCase()}`}
                     target={item === "PATREON" ? "_blank" : "_self"}
                     rel="noopener noreferrer"
-                    className="text-white hover:text-gray-300 transition-colors text-sm"
+                    className="text-white hover:text-gray-300 transition-colors text-xs lg:text-sm"
                   >
                     {item}
                   </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <p className="text-md font-bold tracking-wide"><a href="mailto:olliewoodsdrums@gmail.com">OLLIEWOODSDRUMS@GMAIL.COM</a></p>
+            <p className="text-xs lg:text-md font-bold tracking-wide"><a href="mailto:olliewoodsdrums@gmail.com">OLLIEWOODSDRUMS@GMAIL.COM</a></p>
           </motion.div>
         </div>
 
@@ -115,12 +115,12 @@ const Footer = () => {
 
           {/* Copyright */}
           <motion.div
-            className="mt-2 sm:mt-0 text-right uppercase"
+            className="mt-4 sm:mt-0 text-xs lg:text-md text-right uppercase"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <p className="text-sm">All Rights Reserved {new Date().getFullYear()}</p>
+            <p className="">All Rights Reserved {new Date().getFullYear()}</p>
           </motion.div>
         </div>
       </div>

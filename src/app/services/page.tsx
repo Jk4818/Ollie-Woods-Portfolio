@@ -318,7 +318,7 @@ export default function Services() {
                     className='w-full'
                 >
                     <motion.h2
-                        className="uppercase text-4xl md:text-6xl font-bold mb-8 md:mb-16 md:ml-[16.666%] px-4 md:px-0"
+                        className="uppercase text-4xl md:text-6xl font-bold mb-8 md:mb-16 md:ml-[16.666%]"
                         variants={textReveal}
                         custom={0}
                     >
@@ -329,7 +329,7 @@ export default function Services() {
                 {/* Service cards - made responsive with flex-wrap */}
                 <div
                     ref={servicesRef}
-                    className='flex flex-col items-center md:flex-row flex-wrap gap-12 md:gap-8 xl:px-12 w-full lg:items-start justify-between min-h-[20rem] px-4'
+                    className='flex flex-col items-center md:flex-row flex-wrap gap-20 md:gap-8 py-10 md:py-0 xl:px-12 w-full lg:items-start justify-between min-h-[20rem]'
                 >
                     <motion.div
                         className='w-full lg:w-5/12 max-w-[34rem] flex flex-col gap-6 md:gap-8'
@@ -418,7 +418,7 @@ export default function Services() {
             <motion.section
                 ref={eventsRef}
                 id="events"
-                className="w-full text-white py-16 md:py-24 px-4 md:px-12"
+                className="w-full text-white py-16 md:py-24 md:px-12"
                 initial="hidden"
                 animate={isEventsInView ? "visible" : "hidden"}
                 variants={fadeInUp}

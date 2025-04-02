@@ -10,15 +10,15 @@ export default function Contact() {
   return (
     <motion.section
       ref={ref}
-      className="w-screen h-[75vh] flex justify-center items-center text-white text-sm"
+      className="w-full h-[75vh] flex justify-center items-center text-white text-sm"
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="px-4 w-full text-wrap sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
+      <div className=" w-full text-wrap sm:w-2/3 lg:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
         {/* Title */}
         <motion.h1
-          className="uppercase text-lg font-bold tracking-[0.2em]"
+          className="uppercase text-xs sm:text-lg font-bold tracking-[0.2em]"
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -28,7 +28,7 @@ export default function Contact() {
 
         {/* Email */}
         <motion.h2
-          className="font-serif text-3xl underline font-light"
+          className="font-serif text-lg md:text-3xl underline font-light"
           initial={{ opacity: 0, x: 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,7 +38,7 @@ export default function Contact() {
 
         {/* Description */}
         <motion.p
-          className="indent-8 font-medium"
+          className="indent-8 text-sm md:text-lg font-medium"
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -48,7 +48,7 @@ export default function Contact() {
 
         {/* Social Links */}
         <motion.div
-          className="flex justify-between uppercase"
+          className="flex justify-between uppercase text-xs"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.5, delay: 0.4 }}

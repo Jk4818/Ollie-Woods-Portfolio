@@ -22,13 +22,13 @@ const ImageSlideshow: React.FC<PropType> = ({ slides }) => {
     <div className="embla overflow-hidden" ref={emblaRef}>
       <div className="embla__container flex">
         {slides.map((src, index) => (
-          <div key={index} className="embla__slide flex-[0_0_calc(50%)] lg:flex-[0_0_calc(33.33%)] relative w-full h-[30rem]">
+          <div key={index} className="embla__slide flex-[0_0_calc(100%)] sm:flex-[0_0_calc(50%)]  xl:flex-[0_0_calc(33.33%)] relative w-full h-[30rem]">
             <Image
               src={src}
               alt={`Slide ${index + 1}`}
               fill // Makes the image responsive within the div
-              className="object-cover rounded"
-              sizes="50rem"
+              className="p-1 pt-2 object-cover rounded"
+              sizes="100vw"
               unoptimized={src.startsWith("http") && !src.includes("/_next/image")}
             />
           </div>

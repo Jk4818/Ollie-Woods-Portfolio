@@ -19,7 +19,7 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
   const controls = useAnimation();
   const isInView = useInView(ref, { 
     once: false, 
-    amount: 0.2,
+    amount: 0.1,
     margin: "0px 0px -100px 0px" 
   });
 
@@ -31,42 +31,66 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
     }
   }, [isInView, controls]);
 
-  // Animation variants
+  // Animation variants - matched with EventsTable
   const titleVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
+      transition: { 
+        duration: 0.7, 
+        ease: [0.22, 1, 0.36, 1] 
+      }
     }
   };
-
+  
   const tableHeaderVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.2 } }
+    hidden: { opacity: 0, x: -20 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: 0.5, 
+        delay: 0.2,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
   };
-
+  
   const rowVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: 0.1 + custom * 0.1, ease: [0.22, 1, 0.36, 1] }
+      transition: {
+        duration: 0.5,
+        delay: 0.3 + custom * 0.08,
+        ease: [0.22, 1, 0.36, 1]
+      }
     })
   };
 
   return (
-    <section ref={ref} id="milestones" className="w-full text-white py-24">
-      <div className="container mx-auto overflow-hidden">
+    <section ref={ref} id="milestones" className="w-full text-white py-24 ">
+      <div className="container mx-auto">
         {/* Title */}
-        <motion.h2 className="text-6xl font-bold mb-16" variants={titleVariants} initial="hidden" animate={controls}>
+        <motion.h2 
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16 uppercase" 
+          variants={titleVariants} 
+          initial="hidden" 
+          animate={controls}
+        >
           KEY MILESTONES.
         </motion.h2>
 
-        {/* Milestones Table */}
-        <div className="w-full  uppercase">
+        {/* Desktop Table (hidden on small screens) */}
+        <div className="hidden lg:block w-full uppercase">
           <table className="w-full border-collapse">
-            <motion.thead variants={tableHeaderVariants} initial="hidden" animate={controls}>
+            <motion.thead 
+              variants={tableHeaderVariants} 
+              initial="hidden" 
+              animate={controls}
+            >
               <tr className="border-b-2 border-white">
                 <th className="py-4 text-left text-base uppercase font-bold">Date</th>
                 <th className="py-4 text-left text-base uppercase font-bold">Event</th>
@@ -76,11 +100,18 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
             </motion.thead>
             <tbody>
               {milestones.map((milestone, index) => (
-                <motion.tr key={index} className="border-t-2 border-white" custom={index} variants={rowVariants} initial="hidden" animate={controls}>
-                  <td className="py-6 pr-4 text-left text-sm md:text-base">{milestone.date}</td>
-                  <td className="py-6 pr-4 text-left text-sm md:text-base">{milestone.milestone}</td>
-                  <td className="py-6 pr-4 text-left text-sm md:text-base">{milestone.location}</td>
-                  <td className="py-6 text-left text-sm md:text-base">
+                <motion.tr 
+                  key={`desktop-${index}`} 
+                  className="border-t-2 border-white" 
+                  custom={index} 
+                  variants={rowVariants} 
+                  initial="hidden" 
+                  animate={controls}
+                >
+                  <td className="py-6 pr-4 text-left text-sm w-1/6">{milestone.date}</td>
+                  <td className="py-6 pr-4 text-left text-sm w-2/6">{milestone.milestone}</td>
+                  <td className="py-6 pr-4 text-left text-sm w-2/6">{milestone.location}</td>
+                  <td className="py-6 text-left text-sm w-1/6">
                     {milestone.details ? (
                       <Link href={milestone.details} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
                         DETAILS
@@ -93,6 +124,35 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Cards (shown only on small screens) */}
+        <div className="lg:hidden uppercase">
+          {milestones.map((milestone, index) => (
+            <motion.div
+              key={`mobile-${index}`}
+              className="border-t-2 border-white py-4"
+              custom={index}
+              variants={rowVariants}
+              initial="hidden"
+              animate={controls}
+            >
+              <div className="flex justify-between items-start mb-2">
+                <div className="text-sm">{milestone.date}</div>
+              </div>
+              <div className="text-sm font-medium mb-3 break-words">{milestone.milestone}</div>
+              <div className="flex justify-between items-center">
+                <div className="text-sm">{milestone.location}</div>
+                {milestone.details ? (
+                  <Link href={milestone.details} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors text-sm">
+                    DETAILS
+                  </Link>
+                ) : (
+                  <span className="text-sm">—</span>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
