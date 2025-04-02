@@ -17,8 +17,6 @@ interface EventsSectionProps {
 const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   
-  // We'll add a container motion.div to create a staggered reveal effect
-  // for the multiple EventsTable components
   const containerVariants = {
     hidden: {},
     visible: {
@@ -31,21 +29,20 @@ const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
   return (
     <motion.section 
       ref={sectionRef} 
-      className="w-full"
+      className="w-full overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.05 }}
+      viewport={{ once: true, amount: 0.05 }}
     >
       {yearsData.map((yearData, index) => (
         <EventsTable 
           key={yearData.year}
           events={yearData.events}
-          title={index === 0 ? sectionTitle : ""} // Only show title for the first table
+          title={index === 0 ? sectionTitle : ""}
           year={yearData.year}
           yearLabel={yearData.yearLabel}
-          // Don't show "Learn More" except on the last table
-          showLearnMore={index === yearsData.length }
+          showLearnMore={index === yearsData.length}
         />
       ))}
     </motion.section>

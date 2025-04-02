@@ -5,7 +5,7 @@ import LearnMoreLink from '@/components/LearnMoreLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView} from "framer-motion";
 
 // Animation variants
 const fadeInUp = {
@@ -92,15 +92,7 @@ export default function Services() {
     const endImageRef = useRef(null);
     const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.1 });
 
-    const { scrollYProgress: startImageScroll } = useScroll({
-        target: startImageRef,
-        offset: ["start end", "end start"]
-    });
 
-    const { scrollYProgress: endImageScroll } = useScroll({
-        target: endImageRef,
-        offset: ["start end", "end start"]
-    });
 
     const eventsData = [
         {
@@ -166,7 +158,7 @@ export default function Services() {
         },
         {
             year: "2024",
-            yearLabel: "(CURRENT)",
+            yearLabel: "",
             events: [
                 {
                     date: "20th & 21st December",
@@ -337,7 +329,7 @@ export default function Services() {
                 {/* Service cards - made responsive with flex-wrap */}
                 <div
                     ref={servicesRef}
-                    className='flex flex-col md:flex-row flex-wrap gap-12 md:gap-8 xl:px-12 w-full items-start justify-between min-h-[20rem] px-4'
+                    className='flex flex-col items-center md:flex-row flex-wrap gap-12 md:gap-8 xl:px-12 w-full lg:items-start justify-between min-h-[20rem] px-4'
                 >
                     <motion.div
                         className='w-full lg:w-5/12 max-w-[34rem] flex flex-col gap-6 md:gap-8'

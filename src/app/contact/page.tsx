@@ -15,7 +15,7 @@ export default function Contact() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="px-4 w-full sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
+      <div className="px-4 w-full text-wrap sm:px-0 sm:w-2/3 lg:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
         {/* Title */}
         <motion.h1
           className="uppercase text-lg font-bold tracking-[0.2em]"
@@ -33,7 +33,7 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          olliewoodsdrums@gmail.com
+          <a href="mailto:olliewoodsdrums@gmail.com">olliewoodsdrums@gmail.com</a>
         </motion.h2>
 
         {/* Description */}
@@ -55,7 +55,7 @@ export default function Contact() {
         >
           <div className="align-top h-full">
             <a
-              href="https://www.youtube.com/ow"
+              href="https://www.tiktok.com/@olliewoodsdrums"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300 transition-colors"

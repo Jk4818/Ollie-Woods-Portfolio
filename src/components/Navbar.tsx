@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { Youtube, Instagram, Facebook } from "lucide-react";
+import { PiTiktokLogo } from "react-icons/pi";
 import { motion, AnimatePresence } from "framer-motion";
 import { scrollToSection } from "@/utils/smoothScroll";
 import { usePathname } from "next/navigation";
@@ -153,6 +154,15 @@ const Navbar = () => {
               className="hover:text-gray-300 transition-colors"
             >
               <Facebook size={20} />
+            </a>
+            <a 
+              href="https://www.tiktok.com/@olliewoodsdrums/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Tiktok Page"
+              className="hover:text-gray-300 transition-colors"
+            >
+              <PiTiktokLogo size={20} />
             </a>
             
             {/* Hamburger Menu Button with disabled state */}

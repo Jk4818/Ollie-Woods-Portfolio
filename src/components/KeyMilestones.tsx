@@ -57,14 +57,14 @@ const KeyMilestones = ({ milestones }: KeyMilestonesProps) => {
 
   return (
     <section ref={ref} id="milestones" className="w-full text-white py-24">
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-hidden">
         {/* Title */}
         <motion.h2 className="text-6xl font-bold mb-16" variants={titleVariants} initial="hidden" animate={controls}>
           KEY MILESTONES.
         </motion.h2>
 
         {/* Milestones Table */}
-        <div className="w-full overflow-x-auto uppercase">
+        <div className="w-full  uppercase">
           <table className="w-full border-collapse">
             <motion.thead variants={tableHeaderVariants} initial="hidden" animate={controls}>
               <tr className="border-b-2 border-white">

@@ -122,7 +122,7 @@ const EventsTable = ({
         </motion.div>
 
         {/* Events Table */}
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto overflow-hidden">
           <table className="w-full border-collapse">
             <tbody>
               {events.map((event, index) => (

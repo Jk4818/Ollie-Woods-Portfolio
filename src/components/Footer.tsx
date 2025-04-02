@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Youtube, Instagram, Facebook } from "lucide-react";
+import { PiTiktokLogo } from "react-icons/pi";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -56,7 +57,7 @@ const Footer = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <p className="text-md font-bold tracking-wide">OLLIEWOODSDRUMS@GMAIL.COM</p>
+            <p className="text-md font-bold tracking-wide"><a href="mailto:olliewoodsdrums@gmail.com">OLLIEWOODSDRUMS@GMAIL.COM</a></p>
           </motion.div>
         </div>
 
@@ -69,13 +70,14 @@ const Footer = () => {
             transition={{ duration: 0.4, delay: 0.4 }}
           >
             {[
-              { name: "YouTube", Icon: Youtube },
-              { name: "Instagram", Icon: Instagram },
-              { name: "Facebook", Icon: Facebook },
-            ].map(({ name, Icon }, index) => (
+              { name: "YouTube", Icon: Youtube, Link: "https://www.youtube.com/OllieWoodsDrums" },
+              { name: "Instagram", Icon: Instagram, Link: "https://www.instagram.com/OllieWoodsDrums"  },
+              { name: "Facebook", Icon: Facebook, Link: "https://www.facebook.com/OllieWoodsDrums"  },
+              { name: "TikTok", Icon: PiTiktokLogo, Link: "https://www.tiktok.com/@OllieWoodsDrums"  },
+            ].map(({ name, Icon, Link }, index) => (
               <motion.a
                 key={name} // ✅ Now using a valid key
-                href={`https://www.${name.toLowerCase()}.com/ow`}
+                href={Link}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
