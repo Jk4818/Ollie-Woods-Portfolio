@@ -181,7 +181,7 @@ const EventsTable = ({
             initial="hidden"
             animate={controls}
           >
-            <Link href="/works" className="text-white hover:text-gray-300 transition-colors text-sm">
+            <Link href="/services" className="text-white hover:text-gray-300 transition-colors text-sm">
               Learn More
             </Link>
           </motion.div>

@@ -2,8 +2,8 @@
 
 /* Custom CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #121212;
+  --background: #121212;
+  --foreground: #ededed;
   --font-sans: "Inter", sans-serif; /* Inter font */
   --font-serif: "lora", serif; /* Lora font */
 }

@@ -8,8 +8,8 @@ import ImageSlideshow from "@/components/ImageSlideshow";
 import MotionImage from "@/components/MotionImage";
 import { scrollToSection } from "@/utils/smoothScroll";
 import LearnMoreLink from "@/components/LearnMoreLink";
-import EventsTable from "@/components/EventsTable";
-import { Event } from "@/components/EventsTable";
+import EventsSection from "@/components/EventsSection";
+
 
 const images = [
   "/images/gallery/Spies_Gillian_Lynne.jpg",
@@ -23,7 +23,7 @@ const images = [
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (index : number) => ({
+  visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -32,7 +32,7 @@ const fadeInUp = {
       ease: [0.22, 1, 0.36, 1]
     }
   }),
-  exit: (index : number) => ({
+  exit: (index: number) => ({
     opacity: 0,
     y: -20,
     transition: {
@@ -45,7 +45,7 @@ const fadeInUp = {
 
 const textReveal = {
   hidden: { opacity: 0, y: 10 },
-  visible: (index : number) => ({
+  visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -64,22 +64,22 @@ const textReveal = {
   }
 };
 const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: (delay : number) => ({
-        opacity: 1,
-        transition: {
-            duration: 0.3,
-            delay: delay,
-            ease: [0.22, 1, 0.36, 1]
-        }
-    }),
-    exit: {
-        opacity: 0,
-        transition: {
-            duration: 0.5,
-            ease: [0.22, 1, 0.36, 1]
-        }
+  hidden: { opacity: 0 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      delay: delay,
+      ease: [0.22, 1, 0.36, 1]
     }
+  }),
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  }
 };
 
 
@@ -92,33 +92,67 @@ export default function Home() {
   const galleryRef = useRef<HTMLDivElement>(null);
   const isGalleryInView = useInView(galleryRef, { once: false, amount: 0.1 });
   // Event data based on the design
-  const events: Event[] = [
+  const eventsData = [
     {
-      date: "26th & 27th April",
-      artists: "Starkid: I Can’t Believe It’s Been A Little Less Than A Year",
-      venue: "London Palladium",
-      detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/",
-    },
-    {
-      date: "10th April",
-      artists: "Eden Rain",
-      venue: "The Hope & Ruin, Brighton",
-      detailsLink:
-        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
-    },
-    {
-      date: "9th April",
-      artists: "Eden Rain",
-      venue: "Scala, London",
-      detailsLink:
-        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
-    },
-    {
-      date: "8th April",
-      artists: "Eden Rain",
-      venue: "Rough Trade, Bristol",
-      detailsLink:
-        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+      year: "2025",
+      yearLabel: "(INC. UPCOMING)",
+      events: [
+        {
+          date: "26th & 27th April",
+          artists: "Starkid: I Can't Believe It's Been A Little Less Than A Year",
+          venue: "London Palladium",
+          detailsLink: "https://lwtheatres.co.uk/whats-on/starkid/",
+        },
+        {
+          date: "10th April",
+          artists: "Eden Rain",
+          venue: "The Hope & Ruin, Brighton",
+          detailsLink:
+            "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+        },
+        {
+          date: "9th April",
+          artists: "Eden Rain",
+          venue: "Scala, London",
+          detailsLink:
+            "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+        },
+        {
+          date: "8th April",
+          artists: "Eden Rain",
+          venue: "Rough Trade, Bristol",
+          detailsLink:
+            "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+        },
+        {
+          date: "6th April",
+          artists: "Eden Rain",
+          venue: "Yes, Manchester",
+          detailsLink:
+            "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+        },
+        {
+          date: "5th April",
+          artists: "Samantha Barks",
+          venue: "London Palladium",
+          detailsLink:
+            "https://lwtheatres.co.uk/whats-on/samantha-barks-tlp/",
+        },
+        {
+          date: "15th March",
+          artists: "Rachel Croft",
+          venue: "Festival À Toute Heure, Paris",
+          detailsLink:
+            "https://www.instagram.com/p/DHUAzNIOPY7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+        },
+        {
+          date: "February",
+          artists:
+            "The Reunion: Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, Holly Ann Hull",
+          venue: "China Tour",
+          detailsLink: "https://www.gingerboy.me/the-reunion",
+        },
+      ],
     },
   ];
   return (
@@ -242,7 +276,7 @@ export default function Home() {
             <motion.div
               variants={textReveal}
               custom={4}
-              className="text-right w-full my-4 sm:my-0 mb-4">
+              className="text-right w-full py-4 sm:my-0 pb-4">
               <LearnMoreLink href="/about" target="" />
             </motion.div>
           </div>
@@ -262,9 +296,11 @@ export default function Home() {
       </motion.section>
 
       {/* Selected Works Section - Using the imported component */}
-      <EventsTable
-        events={events}
-        title={"Selected Works."} />
+      <EventsSection
+        sectionTitle="Selected Works."
+        yearsData={eventsData}
+        showLearnMore={true}
+      />
 
     </>
   );

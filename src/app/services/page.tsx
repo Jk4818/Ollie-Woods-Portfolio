@@ -425,7 +425,7 @@ export default function Services() {
                 custom={0}
             >
                 <EventsSection
-                    sectionTitle="Events."
+                    sectionTitle="Selected Works."
                     yearsData={eventsData}
                 />
             </motion.section>

@@ -9,7 +9,7 @@ import AnimatedText from '@/components/AnimatedText';
 
 const fadeIn = {
     hidden: { opacity: 0 },
-    visible: (delay : number) => ({
+    visible: (delay: number) => ({
         opacity: 1,
         transition: {
             duration: 0.8,
@@ -198,6 +198,12 @@ export default function About() {
                         </h1>
                         <p className='indent-8 text-sm font-medium leading-relaxed'>
                             Following in his sister&apos;s footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and is currently studying for a Doctorate in Music at the University of Surrey. This extensive scholarship with the likes of Kenwood Dennard and Victor Wooten transformed his drumming, leading to an exciting career in the music industry.
+                        </p>
+                        <p className='indent-8 text-sm font-medium leading-relaxed'>
+                            He has performed at the London Palladium with Dirty Rotten Scoundrels, Bare, Side Show, and Annie Get Your Gun. Additional theatrical works and concerts include Spies Are Forever (Gillian Lynne Theatre), So Cher (London Hippodrome), Il Volo (Theatre Royal Drury Lane), The Music of James Bond by Candlelight (Belfast Cathedral), A Very Naughty Christmas (Southwark Playhouse), and Playing Our Part (Cadogan Hall).
+                        </p>
+                        <p className='indent-8 text-sm font-medium leading-relaxed'>
+                            Ollie played drums for BBC Radio 1’s Live in Halifax with Eden Rain and regularly performs with ITV’s Starstruck winner Rachael Hawnt for shows and festivals across Europe. He recently joined Rachel Croft for the Jazz à Toute Heure festival in Paris. As well as live performance, he has recorded drums at Damon Albarn’s Studio 13 and worked on drum tracks for Universal Production Music. His drum transcription work has resulted in collaboration with Apple, Moises, Eloy Casagrande (Slipknot), Thomas Lang (Paul Gilbert), and Hasmon Abraham II (Nas).
                         </p>
                     </div>
                 </section>

@@ -12,9 +12,10 @@ interface YearlyEvents {
 interface EventsSectionProps {
   sectionTitle: string;
   yearsData: YearlyEvents[];
+  showLearnMore?: boolean; // Whether to show the "Learn More" link
 }
 
-const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
+const EventsSection = ({ sectionTitle, yearsData, showLearnMore = false }: EventsSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   
   const containerVariants = {
@@ -42,7 +43,7 @@ const EventsSection = ({ sectionTitle, yearsData }: EventsSectionProps) => {
           title={index === 0 ? sectionTitle : ""}
           year={yearData.year}
           yearLabel={yearData.yearLabel}
-          showLearnMore={index === yearsData.length}
+          showLearnMore={showLearnMore}
         />
       ))}
     </motion.section>
