@@ -14,7 +14,7 @@ import EventsSection from "@/components/EventsSection";
 const images = [
   "/images/gallery/Spies_Gillian_Lynne.jpg",
   "/images/gallery/0X5A7601.jpg",
-  "/images/gallery/0X5A7374.jpg",   
+  "/images/gallery/0X5A7374.jpg",
   "/images/gallery/reunion_pov.webp",
   "/images/gallery/reunion.jpg",
 
@@ -174,12 +174,13 @@ export default function Home() {
           >
             {/* Logo Image */}
             <Image
-              src="/logo_2025.svg" // Path from public folder
+              src="/logo_2025.svg"
               alt="Brand Logo"
-              width={200} // Adjust as needed
-              height={200} // Adjust as needed
-              className="w-72 h-auto" // Responsive sizing
+              width={288}   // Matches your w-72 (72 * 4 = 288px)
+              height={288}  // Use actual aspect ratio height
+              className="w-72 h-auto"
               priority
+              loading="eager"
             />
           </motion.div>
 
@@ -200,7 +201,7 @@ export default function Home() {
         <motion.div
           variants={fadeInUp}
           custom={3}
-          className="absolute bottom-10 left-0 right-0 text-center cursor-pointer"
+          className="absolute bottom-20 left-0 right-0 text-center cursor-pointer"
           onClick={() => scrollToSection('biography')}
         >
           <p className="text-xs tracking-widest text-gray-400">Scroll To Explore</p>

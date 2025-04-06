@@ -410,7 +410,7 @@ export default function Services() {
                 <div className="w-full h-full flex items-end overflow-hidden">
                     <MotionImage
                         src="/images/gallery/reunion.jpg"
-                        alt="Ollie Woods at Hoxton"
+                        alt="Ollie Woods at Reunion China Tour 2025" 
                     />
                 </div>
             </motion.section>
