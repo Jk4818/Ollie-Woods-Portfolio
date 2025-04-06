@@ -14,7 +14,7 @@ import EventsSection from "@/components/EventsSection";
 const images = [
   "/images/gallery/Spies_Gillian_Lynne.jpg",
   "/images/gallery/0X5A7601.jpg",
-  "/images/gallery/0x5a7374.jpg",
+  "/images/gallery/0X5A7374.jpg",   
   "/images/gallery/reunion_pov.webp",
   "/images/gallery/reunion.jpg",
 
