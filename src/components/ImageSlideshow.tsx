@@ -26,9 +26,10 @@ const ImageSlideshow: React.FC<PropType> = ({ slides }) => {
             <Image
               src={src}
               alt={`Slide ${index + 1}`}
-              fill // Makes the image responsive within the div
+              fill
               className="p-1 pt-2 object-cover rounded"
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              priority={index < 5} // Make sure the first 5 images are prioritized
               unoptimized={src.startsWith("http") && !src.includes("/_next/image")}
             />
           </div>
