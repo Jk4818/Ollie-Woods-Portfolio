@@ -6,6 +6,7 @@ import { Youtube, Instagram, Facebook } from "lucide-react";
 import { PiTiktokLogo } from "react-icons/pi";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import AnimatedLink from "./AnimatedLink";
 
 const Footer = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -37,14 +38,12 @@ const Footer = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                   transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                 >
-                  <Link
+                  <AnimatedLink
                     href={item === "PATREON" ? "https://patreon.com/OllieWoodsDrums" : `/${item.toLowerCase()}`}
                     target={item === "PATREON" ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
+                    text={item}
                     className="text-white hover:text-gray-300 transition-colors text-xs lg:text-sm"
-                  >
-                    {item}
-                  </Link>
+                  />
                 </motion.li>
               ))}
             </ul>

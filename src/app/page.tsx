@@ -7,7 +7,7 @@ import Image from "next/image";
 import ImageSlideshow from "@/components/ImageSlideshow";
 import MotionImage from "@/components/MotionImage";
 import { scrollToSection } from "@/utils/smoothScroll";
-import LearnMoreLink from "@/components/LearnMoreLink";
+import AnimatedLink from "@/components/AnimatedLink";
 import EventsSection from "@/components/EventsSection";
 
 
@@ -15,8 +15,8 @@ const images = [
   "/images/gallery/Spies_Gillian_Lynne.jpg",
   "/images/gallery/0X5A7601.jpg",
   "/images/gallery/0x5a7374.jpg",
-  "/images/gallery/0x5a7757.jpg",
-  "/images/gallery/40X5A8925.jpg",
+  "/images/gallery/reunion_pov.webp",
+  "/images/gallery/reunion.jpg",
 
 ];
 
@@ -277,7 +277,7 @@ export default function Home() {
               variants={textReveal}
               custom={4}
               className="text-right w-full py-4 sm:my-0 pb-4">
-              <LearnMoreLink href="/about" target="" />
+              <AnimatedLink href="/about" target="" />
             </motion.div>
           </div>
         </div>

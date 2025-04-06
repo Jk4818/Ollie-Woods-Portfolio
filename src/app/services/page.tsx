@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import LearnMoreLink from '@/components/LearnMoreLink';
+import AnimatedLink from '@/components/AnimatedLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
@@ -73,24 +73,24 @@ const textReveal = {
 export default function Services() {
     const mainRef = useRef(null);
     // Use once: true to prevent elements from disappearing when scrolling
-    const isMainInView = useInView(mainRef, { once: false, amount: 0.1 });
+    const isMainInView = useInView(mainRef, { once: false, amount: 0.01 });
 
     const titleRef = useRef(null);
     // Use once: true so title stays visible once it appears
-    const isTitleInView = useInView(titleRef, { once: false, amount: 0.1 });
+    const isTitleInView = useInView(titleRef, { once: false, amount: 0.01 });
 
     const servicesRef = useRef(null);
     // Lower threshold for better mobile viewing
-    const isServicesInView = useInView(servicesRef, { once: false, amount: 0.1 });
+    const isServicesInView = useInView(servicesRef, { once: false, amount: 0.01 });
 
     const startImageRef = useRef(null);
-    const isStartImageInView = useInView(startImageRef, { once: false, amount: 0.1 });
+    const isStartImageInView = useInView(startImageRef, { once: false, amount: 0.01 });
 
     const eventsRef = useRef(null);
-    const isEventsInView = useInView(eventsRef, { once: false, amount: 0.1 });
+    const isEventsInView = useInView(eventsRef, { once: false, amount: 0.01 });
 
     const endImageRef = useRef(null);
-    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.1 });
+    const isEndImageInView = useInView(endImageRef, { once: false, amount: 0.01 });
 
 
 
@@ -318,7 +318,7 @@ export default function Services() {
                     className='w-full'
                 >
                     <motion.h2
-                        className="uppercase text-4xl md:text-6xl font-bold mb-8 md:mb-16 md:ml-[16.666%]"
+                        className="uppercase text-6xl font-bold mb-8 md:mb-16 md:ml-[16.666%]"
                         variants={textReveal}
                         custom={0}
                     >
@@ -329,7 +329,7 @@ export default function Services() {
                 {/* Service cards - made responsive with flex-wrap */}
                 <div
                     ref={servicesRef}
-                    className='flex flex-col items-center md:flex-row flex-wrap gap-20 md:gap-8 py-10 md:py-0 xl:px-12 w-full lg:items-start justify-between min-h-[20rem]'
+                    className='flex flex-col items-center lg:flex-row flex-wrap gap-20 md:gap-8 py-10 md:py-0 xl:px-12 w-full lg:items-start justify-between min-h-[20rem]'
                 >
                     <motion.div
                         className='w-full lg:w-5/12 max-w-[34rem] flex flex-col gap-6 md:gap-8'
@@ -358,7 +358,7 @@ export default function Services() {
                             custom={3}
                         >
                             <div className='align-top h-full'>
-                                <LearnMoreLink href='https://patreon.com/OllieWoodsDrums' />
+                                <AnimatedLink href='https://patreon.com/OllieWoodsDrums' />
                             </div>
                         </motion.div>
                     </motion.div>
@@ -391,7 +391,7 @@ export default function Services() {
                             variants={fadeInUp}
                             custom={3}
                         >
-                            <LearnMoreLink href="/contact" target=''
+                            <AnimatedLink href="/contact" target=''
                                 text='Contact Me' />
                         </motion.div>
                     </motion.div>
@@ -401,7 +401,7 @@ export default function Services() {
             <motion.section
                 ref={startImageRef}
                 id='services_start_image'
-                className="w-full h-[40vh] md:h-[50vh] text-white"
+                className="w-full h-[70vh] lg:h-[90vh] text-white"
                 initial="hidden"
                 animate={isStartImageInView ? "visible" : "hidden"}
                 variants={fadeIn}
@@ -409,7 +409,7 @@ export default function Services() {
             >
                 <div className="w-full h-full flex items-end overflow-hidden">
                     <MotionImage
-                        src="/images/gallery/profile_hoxton.JPG"
+                        src="/images/gallery/reunion.jpg"
                         alt="Ollie Woods at Hoxton"
                     />
                 </div>
@@ -433,7 +433,7 @@ export default function Services() {
             <motion.section
                 ref={endImageRef}
                 id='services_end_image'
-                className="w-full h-[50vh] md:h-[80vh] text-white"
+                className="w-full h-[70vh] lg:h-[90vh] text-white"
                 initial="hidden"
                 animate={isEndImageInView ? "visible" : "hidden"}
                 variants={fadeIn}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-interface LearnMoreLinkProps {
+interface AnimatedLinkProps {
   href: string;
   text?: string;
   target?: string;
@@ -9,7 +9,7 @@ interface LearnMoreLinkProps {
   ariaLabel?: string;
 }
 
-const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
+const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   href,
   text = "Learn More",
   target = "_blank",
@@ -31,6 +31,7 @@ const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
       className={`
         relative 
         inline-block
+        text-sm
         font-medium
         transition-colors
         duration-200
@@ -45,9 +46,6 @@ const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
         after:transition-all
         after:duration-300
         hover:after:w-full
-        focus:outline-none
-        focus:ring-2
-        focus:ring-offset-2
         focus:ring-gray-300
         ${className}
       `}
@@ -57,4 +55,4 @@ const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
   );
 };
 
-export default LearnMoreLink;
+export default AnimatedLink;

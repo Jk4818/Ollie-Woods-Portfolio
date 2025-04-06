@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation, Variants } from "framer-motion";
 
+import AnimatedLink from "@/components/AnimatedLink";
+
 // Define the event type
 export interface Event {
   date: string;
@@ -181,9 +183,10 @@ const EventsTable = ({
             initial="hidden"
             animate={controls}
           >
-            <Link href="/services" className="text-white hover:text-gray-300 transition-colors text-sm">
+            {/* <Link href="/services" className="text-white hover:text-gray-300 transition-colors text-sm">
               Learn More
-            </Link>
+            </Link> */}
+            <AnimatedLink href="/services" target="" text = "Learn More"/>
           </motion.div>
         )}
       </div>

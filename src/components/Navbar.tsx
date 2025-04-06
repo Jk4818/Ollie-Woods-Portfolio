@@ -10,6 +10,7 @@ import { scrollToSection } from "@/utils/smoothScroll";
 import { usePathname } from "next/navigation";
 import HamburgerMenu from "./HamburgerMenu";
 import MobileDropdown from "./MobileDropdown";
+import AnimatedLink from "./AnimatedLink";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -109,33 +110,30 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 mix-blend-difference">
-            <Link
+            <AnimatedLink
               href="/about"
+              text="About"
+              target=""
               className="hover:text-gray-300 transition-colors uppercase text-sm font-medium"
-            >
-              About
-            </Link>
-            <Link 
+            />
+            <AnimatedLink 
               href="/services" 
+              text="Services"
+              target=""
               className="hover:text-gray-300 transition-colors uppercase text-sm font-medium"
-            >
-              Services
-            </Link>
-            <Link 
+            />
+            <AnimatedLink 
               href="/contact" 
+              text="Contact"
+              target=""
               className="hover:text-gray-300 transition-colors uppercase text-sm font-medium"
-            >
-              Contact
-            </Link>
-            <Link
+            />
+            <AnimatedLink
               href="https://patreon.com/OllieWoodsDrums"
               target="_blank"
-              rel="noopener noreferrer"
               className="hover:text-gray-300 transition-colors uppercase text-sm font-medium"
               aria-label="Transcriptions on Patreon"
-            >
-              Transcriptions
-            </Link>
+            />
           </div>
 
           {/* Social Icons & Hamburger Menu */}
