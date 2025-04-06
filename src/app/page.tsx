@@ -173,15 +173,17 @@ export default function Home() {
             className="flex justify-center"
           >
             {/* Logo Image */}
-            <Image
-              src="/logo_2025.svg"
-              alt="Brand Logo"
-              width={288}   // Matches your w-72 (72 * 4 = 288px)
-              height={288}  // Use actual aspect ratio height
-              className="w-72 h-auto"
-              priority
-              loading="eager"
-            />
+            <picture>
+              <Image
+                src="/logo_2025.svg"
+                alt="Brand Logo"
+                width={288}   // Matches your w-72 (72 * 4 = 288px)
+                height={288}  // Use actual aspect ratio height
+                className="w-72 h-auto"
+                priority
+                loading="eager"
+              />
+            </picture>
           </motion.div>
 
           {/* Text Animation */}
