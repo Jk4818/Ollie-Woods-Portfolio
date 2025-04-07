@@ -182,8 +182,8 @@ export default function About() {
                     pointerEvents: isTextAnimationComplete ? 'auto' : 'none',
                 }}
             >
-                <section className='mt-10 sm:min-h-[100vh] sm:h-max grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16'>
-                    <div className='h-96 sm:h-full lg:col-span-2'>
+                <section className='mt-10 sm:min-h-[100vh] sm:h-max grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16'>
+                    <div className='h-[75vh] md:h-full lg:col-span-2'>
                         <div className="w-full h-full flex items-end">
                             <MotionImage
                                 src="/images/gallery/profile_hoxton.JPG"

@@ -1,5 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { Inter } from "next/font/google";
 import { Lora } from 'next/font/google';
 import "./globals.css";
@@ -39,6 +40,7 @@ export default function RootLayout({
           <main className="flex-grow px-4">{children}</main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
