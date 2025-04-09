@@ -130,6 +130,7 @@ const Navbar = () => {
             />
             <AnimatedLink
               href="https://patreon.com/OllieWoodsDrums"
+              text="Transcriptions"
               target="_blank"
               className="hover:text-gray-300 transition-colors uppercase text-sm font-medium"
               aria-label="Transcriptions on Patreon"
