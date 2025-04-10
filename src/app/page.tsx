@@ -226,9 +226,9 @@ export default function Home() {
         variants={fadeIn}
         custom={0}
         className="w-full lg:h-[90vh] bg-black text-white">
-        <div className="flex flex-col lg:flex-row h-full">
+        <div className="flex flex-col xl:flex-row h-full">
           {/* Left side - Main image (2/3 width on desktop) */}
-          <div className=" w-full h-96 lg:h-full lg:w-2/3 col-span-1 flex items-end">
+          <div className=" w-full h-96 lg:h-full xl:w-2/3 col-span-1 flex items-end">
             <MotionImage
               src="/images/gallery/0X5A7608.jpg"
               alt="Ollie Woods at Hoxton"
@@ -237,13 +237,13 @@ export default function Home() {
           </div>
 
           {/* Right side - Bio text (1/3 width on desktop) */}
-          <div className="h-full w-full lg:w-1/3 bg-custom-main text-white px-4 lg:pt-16 xl:pt-24 flex flex-col justify-between">
+          <div className="h-full w-full xl:w-1/3 bg-custom-main text-white px-4 xl:pt-24  flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
               {/* Title */}
               <motion.h2
                 variants={textReveal}
                 custom={1}
-                className="text-6xl font-bold mt-10 lg:mt-0 mb-12 md:mb-16 lg:mb-20">BIO.</motion.h2>
+                className="text-6xl font-bold mt-10 xl:mt-0 mb-12 md:mb-16 lg:mb-20">BIO.</motion.h2>
               {/* Bio Text */}
               <div className="grid sm:grid-cols-3 ">
                 {/* Text Container */}
@@ -263,7 +263,7 @@ export default function Home() {
                   <motion.p
                     variants={textReveal}
                     custom={3}
-                    className="indent-8 block lg:hidden xl:block">
+                    className="indent-8">
                     He has developed a <span className="font-bold">library of transcription and
                       performance</span> videos for the drumming community on Instagram, with a combined audience
                     of over <span className="font-bold">100,000</span> across social media. Ollie is
