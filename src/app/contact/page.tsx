@@ -15,7 +15,7 @@ export default function Contact() {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
     >
-      <div className=" w-full text-wrap sm:w-2/3 lg:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
+      <div className=" w-full text-wrap sm:w-2/3 xl:w-1/3 max-w-[34rem] h-1/3 flex flex-col gap-8">
         {/* Title */}
         <motion.h1
           className="uppercase text-xs sm:text-lg font-bold tracking-[0.2em]"

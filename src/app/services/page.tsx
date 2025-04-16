@@ -223,12 +223,6 @@ export default function Services() {
                     venue: "The Star Inn, Guildford",
                     detailsLink: "https://www.instagram.com/armstrong_band/",
                 },
-            ],
-        },
-        {
-            year: "2023",
-            yearLabel: "",
-            events: [
                 {
                     date: "3rd September",
                     artists: "Spies Are Forever",
