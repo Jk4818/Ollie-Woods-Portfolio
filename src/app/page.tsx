@@ -217,7 +217,7 @@ export default function Home() {
         </motion.div>
       </motion.section>
 
-      {/* Biography Section - Using the new layout from the design */}
+      {/* Biography Section */}
       <motion.section
         id="biography"
         ref={biographyRef}
@@ -225,7 +225,7 @@ export default function Home() {
         animate={isBioInView ? "visible" : "hidden"}
         variants={fadeIn}
         custom={0}
-        className="w-full lg:h-[90vh] bg-black text-white">
+        className="w-full lg:min-h-[50rem] lg:h-[90vh] bg-black text-white">
         <div className="flex flex-col xl:flex-row h-full">
           {/* Left side - Main image (2/3 width on desktop) */}
           <div className=" w-full h-96 lg:h-full xl:w-2/3 col-span-1 flex items-end">
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
 
           {/* Right side - Bio text (1/3 width on desktop) */}
-          <div className="h-full w-full xl:w-1/3 bg-custom-main text-white px-4 xl:pt-24  flex flex-col justify-between">
+          <div className="relative h-full w-full xl:w-1/3 bg-custom-main text-white px-4 xl:pt-24  flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
               {/* Title */}
               <motion.h2
@@ -245,7 +245,7 @@ export default function Home() {
                 custom={1}
                 className="text-6xl font-bold mt-10 xl:mt-0 mb-12 md:mb-16 lg:mb-20">BIO.</motion.h2>
               {/* Bio Text */}
-              <div className="grid sm:grid-cols-3 ">
+              <div className="flex 2xl:pr-30">
                 {/* Text Container */}
                 <div className="col-span-2 max-w-2xl text-sm font-medium leading-6 space-y-6 flex flex-col justify-end self-end">
                   <motion.p
@@ -279,7 +279,7 @@ export default function Home() {
             <motion.div
               variants={textReveal}
               custom={4}
-              className="text-right w-full py-4 sm:my-0 pb-4">
+              className="text-right py-4 ">
               <AnimatedLink href="/about" target="" />
             </motion.div>
           </div>
