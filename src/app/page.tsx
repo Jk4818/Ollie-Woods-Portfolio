@@ -98,6 +98,36 @@ export default function Home() {
       yearLabel: "(INC. UPCOMING)",
       events: [
         {
+            "date": "27th June",
+            "artists": "Rachel Croft",
+            "venue": "The Lexington, London",
+            "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+            "date": "22nd June",
+            "artists": "Undertale: 10th Anniversary Orchestral Concert",
+            "venue": "Eventim Apollo, London",
+            "detailsLink": "https://www.eventimapollo.com/events/undertale/"
+        },
+        {
+            "date": "5th June",
+            "artists": "Rachel Croft",
+            "venue": "Night & Day Café, Manchester",
+            "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+            "date": "31st May",
+            "artists": "Rachel Croft",
+            "venue": "The Crescent, York",
+            "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+            "date": "27th May",
+            "artists": "Janie Dee’s Beautiful World Cabaret: Carly Mercedes Dyer & Em Hoggett",
+            "venue": "Crazy Coqs, Soho",
+            "detailsLink": "https://www.brasseriezedel.com/events/beautiful-world-cabaret-with-carly-mercedes/"
+        },
+        {
           date: "26th & 27th April",
           artists: "Starkid: I Can't Believe It's Been A Little Less Than A Year",
           venue: "London Palladium",

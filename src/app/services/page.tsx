@@ -5,12 +5,12 @@ import AnimatedLink from '@/components/AnimatedLink';
 import EventsSection from '@/components/EventsSection';
 import MotionImage from "@/components/MotionImage";
 
-import { motion, useInView} from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // Animation variants
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: (index : number) => ({
+    visible: (index: number) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -19,7 +19,7 @@ const fadeInUp = {
             ease: [0.22, 1, 0.36, 1]
         }
     }),
-    exit: (index : number) => ({
+    exit: (index: number) => ({
         opacity: 0,
         y: -20,
         transition: {
@@ -32,7 +32,7 @@ const fadeInUp = {
 
 const fadeIn = {
     hidden: { opacity: 0 },
-    visible: (delay : number) => ({
+    visible: (delay: number) => ({
         opacity: 1,
         transition: {
             duration: 0.8,
@@ -51,7 +51,7 @@ const fadeIn = {
 
 const textReveal = {
     hidden: { opacity: 0, y: 100 },
-    visible: (index : number) => ({
+    visible: (index: number) => ({
         opacity: 1,
         y: 0,
         transition: {
@@ -99,6 +99,36 @@ export default function Services() {
             year: "2025",
             yearLabel: "(INC. UPCOMING)",
             events: [
+                {
+                    "date": "27th June",
+                    "artists": "Rachel Croft",
+                    "venue": "The Lexington, London",
+                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    "date": "22nd June",
+                    "artists": "Undertale: 10th Anniversary Orchestral Concert",
+                    "venue": "Eventim Apollo, London",
+                    "detailsLink": "https://www.eventimapollo.com/events/undertale/"
+                },
+                {
+                    "date": "5th June",
+                    "artists": "Rachel Croft",
+                    "venue": "Night & Day Café, Manchester",
+                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    "date": "31st May",
+                    "artists": "Rachel Croft",
+                    "venue": "The Crescent, York",
+                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                },
+                {
+                    "date": "27th May",
+                    "artists": "Janie Dee’s Beautiful World Cabaret: Carly Mercedes Dyer & Em Hoggett",
+                    "venue": "Crazy Coqs, Soho",
+                    "detailsLink": "https://www.brasseriezedel.com/events/beautiful-world-cabaret-with-carly-mercedes/"
+                },
                 {
                     date: "26th & 27th April",
                     artists: "Starkid: I Can't Believe It's Been A Little Less Than A Year",
@@ -404,7 +434,7 @@ export default function Services() {
                 <div className="w-full h-full flex items-end overflow-hidden">
                     <MotionImage
                         src="/images/gallery/reunion.jpg"
-                        alt="Ollie Woods at Reunion China Tour 2025" 
+                        alt="Ollie Woods at Reunion China Tour 2025"
                     />
                 </div>
             </motion.section>
