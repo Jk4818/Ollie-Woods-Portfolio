@@ -100,6 +100,42 @@ export default function Services() {
             yearLabel: "(INC. UPCOMING)",
             events: [
                 {
+                    date: "8th – 15th September",
+                    artists: "The Reunion Tour",
+                    venue: "Taipei",
+                    detailsLink: "https://www.gingerboy.me/the-reunion",
+                },
+                {
+                    date: "31st August – 7th September",
+                    artists: "The Reunion Tour",
+                    venue: "Beijing",
+                    detailsLink: "https://www.gingerboy.me/the-reunion",
+                },
+                {
+                    date: "30th August",
+                    artists: "So Cher Show",
+                    venue: "Gladstone Theatre",
+                    detailsLink: "https://gladstonetheatre.org.uk/events/so-cher/",
+                },
+                {
+                    date: "9th August",
+                    artists: "So Cher Show",
+                    venue: "Somerset",
+                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
+                },
+                {
+                    date: "12th July",
+                    artists: "Rachel Croft",
+                    venue: "Batch Farm Festival",
+                    detailsLink: "https://www.instagram.com/rachelcroftmusic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                },
+                {
+                    date: "5th July",
+                    artists: "Great Scott (Private Event)",
+                    venue: "Tuscany, Italy",
+                    detailsLink: "https://www.instagram.com/reel/DLw0HTkN6JK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
                     "date": "27th June",
                     "artists": "Rachel Croft",
                     "venue": "The Lexington, London",
