@@ -145,7 +145,7 @@ export default function Services() {
                     "date": "22nd June",
                     "artists": "Undertale: 10th Anniversary Orchestral Concert",
                     "venue": "Eventim Apollo, London",
-                    "detailsLink": "https://www.eventimapollo.com/events/undertale/"
+                    "detailsLink": "https://www.instagram.com/p/DLQLIdtt4fs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 },
                 {
                     "date": "5th June",
