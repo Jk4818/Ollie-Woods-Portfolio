@@ -100,6 +100,30 @@ export default function Services() {
             yearLabel: "(INC. UPCOMING)",
             events: [
                 {
+                    date: "14th October",
+                    artists: "Eden Rain",
+                    venue: "Oslo, Hackney",
+                    detailsLink: "https://www.instagram.com/p/DNOLH5ssR7L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                },
+                {
+                    date: "6th – 12th October",
+                    artists: "Rachel Croft Tour",
+                    venue: "UK",
+                    detailsLink: "https://www.instagram.com/p/DMGSb89sUlc/?img_index=1",
+                },
+                {
+                    date: "5th October",
+                    artists: "Rachel Zegler",
+                    venue: "London Palladium",
+                    detailsLink: "https://www.whatsonstage.com/news/rachel-zegler-to-perform-solo-concert-in-the-west-end_1691991/",
+                },
+                {
+                    date: "21st September",
+                    artists: "Songs For A New World (with Jason Robert Brown, Shoshana Bean, Tituss Burgess, Jordan Fisher, Joy Woods)",
+                    venue: "Eventim Apollo",
+                    detailsLink: "https://lambertjackson.co.uk/whats-on/songs-for-a-new-world-30th-anniversary-concert",
+                },
+                {
                     date: "8th – 15th September",
                     artists: "The Reunion Tour",
                     venue: "Taipei",
@@ -114,14 +138,26 @@ export default function Services() {
                 {
                     date: "30th August",
                     artists: "So Cher Show",
-                    venue: "Gladstone Theatre",
+                    venue: "Gladstone Theatre, Liverpool",
                     detailsLink: "https://gladstonetheatre.org.uk/events/so-cher/",
+                },
+                {
+                    date: "23rd August",
+                    artists: "Coldplay Fanpark",
+                    venue: "Boxpark, Wembley",
+                    detailsLink: "https://secretldn.com/coldplay-pre-show-fan-parks/",
                 },
                 {
                     date: "9th August",
                     artists: "So Cher Show",
                     venue: "Somerset",
                     detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
+                },
+                {
+                    date: "2nd August",
+                    artists: "HYPR",
+                    venue: "Somerset",
+                    detailsLink: "https://www.hypr-band.co.uk",
                 },
                 {
                     date: "12th July",
@@ -136,34 +172,34 @@ export default function Services() {
                     detailsLink: "https://www.instagram.com/reel/DLw0HTkN6JK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    "date": "27th June",
-                    "artists": "Rachel Croft",
-                    "venue": "The Lexington, London",
-                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    date: "27th June",
+                    artists: "Rachel Croft",
+                    venue: "The Lexington, London",
+                    detailsLink: "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    "date": "22nd June",
-                    "artists": "Undertale: 10th Anniversary Orchestral Concert",
-                    "venue": "Eventim Apollo, London",
-                    "detailsLink": "https://www.instagram.com/p/DLQLIdtt4fs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    date: "22nd June",
+                    artists: "Undertale: 10th Anniversary Orchestral Concert",
+                    venue: "Eventim Apollo, London",
+                    detailsLink: "https://www.instagram.com/p/DLQLIdtt4fs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    "date": "5th June",
-                    "artists": "Rachel Croft",
-                    "venue": "Night & Day Café, Manchester",
-                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    date: "5th June",
+                    artists: "Rachel Croft",
+                    venue: "Night & Day Café, Manchester",
+                    detailsLink: "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    "date": "31st May",
-                    "artists": "Rachel Croft",
-                    "venue": "The Crescent, York",
-                    "detailsLink": "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    date: "31st May",
+                    artists: "Rachel Croft",
+                    venue: "The Crescent, York",
+                    detailsLink: "https://www.instagram.com/p/DHrHKVjucmy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
-                    "date": "27th May",
-                    "artists": "Janie Dee’s Beautiful World Cabaret: Carly Mercedes Dyer & Em Hoggett",
-                    "venue": "Crazy Coqs, Soho",
-                    "detailsLink": "https://www.brasseriezedel.com/events/beautiful-world-cabaret-with-carly-mercedes/"
+                    date: "27th May",
+                    artists: "Janie Dee’s Beautiful World Cabaret: Carly Mercedes Dyer & Em Hoggett",
+                    venue: "Crazy Coqs, Soho",
+                    detailsLink: "https://www.brasseriezedel.com/events/beautiful-world-cabaret-with-carly-mercedes/",
                 },
                 {
                     date: "26th & 27th April",
@@ -175,187 +211,48 @@ export default function Services() {
                     date: "10th April",
                     artists: "Eden Rain",
                     venue: "The Hope & Ruin, Brighton",
-                    detailsLink:
-                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
                     date: "9th April",
                     artists: "Eden Rain",
                     venue: "Scala, London",
-                    detailsLink:
-                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
                     date: "8th April",
                     artists: "Eden Rain",
                     venue: "Rough Trade, Bristol",
-                    detailsLink:
-                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
                     date: "6th April",
                     artists: "Eden Rain",
                     venue: "Yes, Manchester",
-                    detailsLink:
-                        "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
+                    detailsLink: "https://www.instagram.com/p/DHTuxZbSENT/?utm_source=ig_web_copy_link",
                 },
                 {
                     date: "5th April",
                     artists: "Samantha Barks",
                     venue: "London Palladium",
-                    detailsLink:
-                        "https://lwtheatres.co.uk/whats-on/samantha-barks-tlp/",
+                    detailsLink: "https://lwtheatres.co.uk/whats-on/samantha-barks-tlp/",
                 },
                 {
                     date: "15th March",
                     artists: "Rachel Croft",
                     venue: "Festival À Toute Heure, Paris",
-                    detailsLink:
-                        "https://www.instagram.com/p/DHUAzNIOPY7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                    detailsLink: "https://www.instagram.com/p/DHUAzNIOPY7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
                 },
                 {
                     date: "February",
-                    artists:
-                        "The Reunion: Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, Holly Ann Hull",
+                    artists: "The Reunion: Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, Holly Ann Hull",
                     venue: "China Tour",
                     detailsLink: "https://www.gingerboy.me/the-reunion",
                 },
             ],
         },
-        {
-            year: "2024",
-            yearLabel: "",
-            events: [
-                {
-                    date: "20th & 21st December",
-                    artists: "A Very Naughty Christmas",
-                    venue: "Southwark Playhouse (Elephant)",
-                    detailsLink: "https://www.averynaughtychristmas.com",
-                },
-                {
-                    date: "5th December",
-                    artists: "The Vice-Chancellor's Awards",
-                    venue: "University Hall, Guildford",
-                    detailsLink:
-                        "https://www.instagram.com/p/DDO5OnStVNe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "30th November",
-                    artists: "So Cher",
-                    venue: "Heythrop Park, Oxford",
-                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
-                },
-                {
-                    date: "24th November",
-                    artists: "Dirty Rotten Scoundrels",
-                    venue: "London Palladium",
-                    detailsLink:
-                        "https://www.instagram.com/reel/DCy0BcTtFYO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "20th November",
-                    artists: "Eden Rain – BBC New Music Live",
-                    venue: "Square Chapel, Halifax",
-                    detailsLink: "https://www.youtube.com/watch?v=qRqbWN_41gE",
-                },
-                {
-                    date: "12th November",
-                    artists: "Eden Rain",
-                    venue: "Moth Club, London",
-                    detailsLink: "https://www.instagram.com/edenintherain/",
-                },
-                {
-                    date: "25th October",
-                    artists: "Armstrong",
-                    venue: "West End Centre, Hampshire",
-                    detailsLink: "https://www.instagram.com/armstrong_band/",
-                },
-                {
-                    date: "10th October",
-                    artists: "Great Scott",
-                    venue: "Elland Road, Leeds",
-                    detailsLink: "https://www.greatscottband.com",
-                },
-                {
-                    date: "6th October",
-                    artists: "Il Volo",
-                    venue: "Theatre Royal Drury Lane, London",
-                    detailsLink:
-                        "https://www.instagram.com/reel/DA2sfgIMz4z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "28th September",
-                    artists: "Armstrong",
-                    venue: "The Star Inn, Guildford",
-                    detailsLink: "https://www.instagram.com/armstrong_band/",
-                },
-                {
-                    date: "3rd September",
-                    artists: "Spies Are Forever",
-                    venue: "Gillian Lynne Theatre, London",
-                    detailsLink:
-                        "https://www.instagram.com/p/C_jKNzPy9w9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "28th August",
-                    artists: "Harry Baker",
-                    venue: "The Britannia, Guildford",
-                    detailsLink: "https://www.instagram.com/harrybakeruk/",
-                },
-                {
-                    date: "19th July",
-                    artists: "Thotrio",
-                    venue: "Notting Hill Arts Club, London",
-                    detailsLink: "https://www.instagram.com/tho.trio/",
-                },
-                {
-                    date: "16th July",
-                    artists: "Layton & Nikita Live!",
-                    venue: "Theatre Royal Drury Lane, London",
-                    detailsLink:
-                        "https://www.instagram.com/reel/C9NMkTcIsXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "6th July",
-                    artists: "Armstrong",
-                    venue: "Haslemere Fringe Festival",
-                    detailsLink: "https://www.instagram.com/armstrong_band/",
-                },
-                {
-                    date: "6th July",
-                    artists: "Emily Windham",
-                    venue: "Farnham House Hotel",
-                    detailsLink: "https://www.instagram.com/emilylaurra/",
-                },
-                {
-                    date: "30th June",
-                    artists: "Layton & Nikita Live!",
-                    venue: "Bridgewater Hall, Manchester",
-                    detailsLink:
-                        "https://www.instagram.com/p/C849whxodby/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "15th June",
-                    artists: "So Cher",
-                    venue: "London Hippodrome",
-                    detailsLink: "https://www.rachael-hawnt.co.uk/so-cher",
-                },
-                {
-                    date: "3rd June",
-                    artists: "Playing Our Part: The West End Sings for Target Ovarian Cancer",
-                    venue: "Cadogan Hall, London",
-                    detailsLink:
-                        "https://www.instagram.com/reel/C7ylFTrMON2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-                },
-                {
-                    date: "28th May",
-                    artists: "Eden Rain",
-                    venue: "The Kazimier, Leeds",
-                    detailsLink: "https://www.instagram.com/edenintherain/",
-                },
-            ]
-        }
     ];
+
 
 
     return (
