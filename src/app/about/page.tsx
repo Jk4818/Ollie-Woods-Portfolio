@@ -37,6 +37,18 @@ export default function About() {
     // Sample milestone data (replace with your actual data)
     const milestones: Milestone[] = [
         {
+            date: "2025",
+            milestone: "PhD in Music awarded",
+            location: "University of Surrey",
+            details: "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Rhythmic-Modulation-in-Contemporary-Drum-Practice/991013666302346?institution=44SUR_INST"
+        },
+        {
+            date: "2025",
+            milestone: "First international tour ",
+            location: "Asia",
+            details: "https://www.gingerboy.me/the-reunion"
+        },
+        {
             date: "2024",
             milestone: "Transcription collaboration with Moises, Apple, Eloy Casagrande (Slipknot)",
             location: "Remote Work",
@@ -147,7 +159,7 @@ export default function About() {
                     >
                         <AnimatedText
                             scrollYProgress={scrollYProgress}
-                            text="Ollie is a London-based session drummer working with a diverse roster of artists across the UK and internationally. He recently toured China with The Reunion featuring Ramin Karimloo, Samantha Barks, Hadley Fraser, Natalie May Paris, Earl Carpenter, and Holly Ann Hull. In 2024, he performed alongside Jason Robert Brown with guest stars Cynthia Erivo and Alfie Boe at the London Palladium, and played on the UK tour of Layton and Nikita Live! including two shows at Theatre Royal Drury Lane."
+                            text="Ollie is a London-based session drummer working with a diverse roster of artists across the UK and internationally. Performance highlights from 2025 include Rachel Zegler ft. Andrew Lloyd Webber (London Palladium) Jason Robert Brown’s Songs For A New World: 30th Anniversary Concert (Eventim Apollo), Ramin Karimloo’s The Reunion (China Tour), Samantha Barks (London Palladium), StarKid’s ‘I Can’t Believe It’s Been A Little Less Than A Year’ (London Palladium), and Undertale In Concert (Eventim Apollo)."
                         />
                     </motion.div>
                 </div>
@@ -197,13 +209,13 @@ export default function About() {
                             About Cont.
                         </h1>
                         <p className='indent-8 text-sm font-medium leading-relaxed'>
-                            Following in his sister&apos;s footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and is currently studying for a Doctorate in Music at the University of Surrey. This extensive scholarship with the likes of Kenwood Dennard and Victor Wooten transformed his drumming, leading to an exciting career in the music industry.
+                            Following in his sister Charlotte&apos;s footsteps, Ollie began drum lessons with Omar Hayes aged 7. He continued his performance studies at the renowned Berklee College of Music (Boston, US), attained a Fellowship of Trinity College London, and became a Doctor of Philosophy after completing his PhD in Music at the University of Surrey.
                         </p>
                         <p className='indent-8 text-sm font-medium leading-relaxed'>
-                            He has performed at the London Palladium with Dirty Rotten Scoundrels, Bare, Side Show, and Annie Get Your Gun. Additional theatrical works and concerts include Spies Are Forever (Gillian Lynne Theatre), So Cher (London Hippodrome), Il Volo (Theatre Royal Drury Lane), The Music of James Bond by Candlelight (Belfast Cathedral), A Very Naughty Christmas (Southwark Playhouse), and Playing Our Part (Cadogan Hall).
+                            Notable artists he has performed with include Rachel Zegler, Andrew Lloyd Webber, Cynthia Erivo, Jason Robert Brown, Alfie Boe, Samantha Barks, Ramin Karimloo, Jordan Fisher, Tituss Burgess, Shoshana Bean, Joy Woods, Joey Richter, Lauren Lopez, Layton Williams, Nikita Kuzmin, Rachel Tucker, Louise Dearman, Hadley Fraser, Natalie May Paris, Holly-Ann Hull, Earl Carpenter, Rob Houchen, Oliver Savile, Matt Henry, Rachael Hawnt, Jordan Luke Gage, Oliver Ormson, Janie Dee, Emma Kingston, Rachel Croft, and Eden Rain.
                         </p>
                         <p className='indent-8 text-sm font-medium leading-relaxed'>
-                            Ollie played drums for BBC Radio 1’s Live in Halifax with Eden Rain and regularly performs with ITV’s Starstruck winner Rachael Hawnt for shows and festivals across Europe. He recently joined Rachel Croft for the Jazz à Toute Heure festival in Paris. As well as live performance, he has recorded drums at Damon Albarn’s Studio 13 and worked on drum tracks for Universal Production Music. His drum transcription work has resulted in collaboration with Apple, Moises, Eloy Casagrande (Slipknot), Thomas Lang (Paul Gilbert), and Hasmon Abraham II (Nas).
+                            As well as live performance, Ollie has recorded drums at RAK and Damon Albarn’s Studio 13, and worked on drum tracks for Universal Production Music. His drum transcription work has attracted a combined audience of over 100,000 followers on social media, resulting in collaboration with the likes of Apple, Moises AI, Eloy Casagrande (Slipknot), Hasmon Abraham II (Nas), Thomas Lang, and JP Bouvet.
                         </p>
                     </div>
                 </section>

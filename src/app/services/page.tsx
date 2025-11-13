@@ -113,9 +113,9 @@ export default function Services() {
                 },
                 {
                     date: "5th October",
-                    artists: "Rachel Zegler",
+                    artists: "Rachel Zegler (with special guest Andrew Lloyd Webber)",
                     venue: "London Palladium",
-                    detailsLink: "https://www.whatsonstage.com/news/rachel-zegler-to-perform-solo-concert-in-the-west-end_1691991/",
+                    detailsLink: "https://www.whatsonstage.com/news/rachel-zegler-and-andrew-lloyd-webber-perform-a-phantom-of-the-opera-number-at-the-london-palladium-watch-now_1697302/",
                 },
                 {
                     date: "21st September",
